@@ -1,14 +1,17 @@
 // Event listener - game start button
+// calls gameStart function
 let startGame = document.getElementById("start-game");
     startGame.addEventListener("click", function(){
         gameStart();
     });
 //Event listener - next ball button
+// calls playBall function
 let nextBall = document.getElementById("play-ball");
     nextBall.addEventListener("click", function(){
         playBall();
     });
 //Event listener - OWZthat button
+// calls umpire function
 let callUmpire = document.getElementById("play-Owzthat");
     callUmpire.addEventListener("click", function(){
         umpire();
@@ -40,7 +43,9 @@ function generateScore(){
  * If runs > target game ends and end game function called.                                                                                                                                                                                                
  */
 function playBall(){
-    alert(`playBall() has been called`);
+    let batDie = [0, 0, 1, 1, 1, 2, 3, 4, 6, "Owzthat"];
+    let ball = Math.floor(Math.random() * 10);
+    let runs = batDie[ball];
 }
 
 /**
