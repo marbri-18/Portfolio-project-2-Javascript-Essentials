@@ -54,6 +54,8 @@ function playBall(){
     let dialogueBox = document.getElementById("dialogue-box");
     let batsmanUpdate = document.getElementsByClassName("on-strike")[0];
     let incrementRuns;
+    let batA = document.getElementById("batA");
+    let batB = document.getElementById("batB");
 
     switch (runs){
         case "0a":            
@@ -68,6 +70,8 @@ function playBall(){
             dialogueBox.textContent = "Well done, You've sneaked it through the infield for one run";
             incrementRuns = batRuns + 1;
             batsmanUpdate.textContent = incrementRuns;
+            batA.classList.toggle("on-strike");
+            batB.classList.toggle("on-strike");
         break;
     
         case "1b":
@@ -75,6 +79,8 @@ function playBall(){
             dialogueBox.textContent = "quick single, well run";
             incrementRuns = batRuns +1;
             batsmanUpdate.textContent = incrementRuns;
+            batA.classList.toggle("on-strike");
+            batB.classList.toggle("on-strike");
         break;
     
         case "1c":
@@ -82,6 +88,8 @@ function playBall(){
             dialogueBox.textContent = "Nice shot for a comfortable single";
             incrementRuns = batRuns + 1;
             batsmanUpdate.textContent = incrementRuns;
+            batA.classList.toggle("on-strike");
+            batB.classList.toggle("on-strike");
         break;
     
         case "2a":
@@ -103,6 +111,8 @@ function playBall(){
             dialogueBox.textContent = "Nice hit but fielded in the deep, Well run for three";
             incrementRuns = batRuns + 3;
             batsmanUpdate.textContent = incrementRuns;
+            batA.classList.toggle("on-strike");
+            batB.classList.toggle("on-strike");
         break;
     
         case 4:
