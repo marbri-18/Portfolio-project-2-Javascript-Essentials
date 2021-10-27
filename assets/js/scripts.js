@@ -25,7 +25,7 @@ let callUmpire = document.getElementById("play-Owzthat");
  * Calls generate computer score function
  */
 function gameStart(){
-    alert(`gameStart() has been called`);
+    
 }
 
 /**
@@ -54,8 +54,14 @@ function playBall(){
     let dialogueBox = document.getElementById("dialogue-box");
     let batsmanUpdate = document.getElementsByClassName("on-strike")[0];
     let incrementRuns;
+    let totalTargetEl = document.getElementById("innings-total-score");
+    let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
+   
+    let incrementTotal;
+    
     let batA = document.getElementById("batA");
     let batB = document.getElementById("batB");
+    //let total = parseInt(document.getElementById("innings-total-score").innerText);
 
     switch (runs){
         case "0a":            
@@ -72,6 +78,8 @@ function playBall(){
             batsmanUpdate.textContent = incrementRuns;
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
+            incrementTotal = previousTotal + 1;
+            totalTargetEl.textContent = incrementTotal;
         break;
     
         case "1b":
@@ -81,6 +89,8 @@ function playBall(){
             batsmanUpdate.textContent = incrementRuns;
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
+            incrementTotal = previousTotal + 1;
+            totalTargetEl.textContent = incrementTotal;
         break;
     
         case "1c":
@@ -90,6 +100,8 @@ function playBall(){
             batsmanUpdate.textContent = incrementRuns;
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
+            incrementTotal = previousTotal + 1;
+            totalTargetEl.textContent = incrementTotal;
         break;
     
         case "2a":
@@ -97,6 +109,8 @@ function playBall(){
             dialogueBox.textContent = "good shot, two runs taken";
             incrementRuns = batRuns + 2;
             batsmanUpdate.textContent = incrementRuns;
+            incrementTotal = previousTotal + 2;
+            totalTargetEl.textContent = incrementTotal;
         break;
 
         case "2b":
@@ -104,6 +118,8 @@ function playBall(){
             dialogueBox.textContent = "guided into the outfield for an easy two runs";
             incrementRuns = batRuns + 2;
             batsmanUpdate.textContent = incrementRuns;
+            incrementTotal = previousTotal + 2;
+            totalTargetEl.textContent = incrementTotal;
         break;
     
         case 3:
@@ -113,6 +129,8 @@ function playBall(){
             batsmanUpdate.textContent = incrementRuns;
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
+            incrementTotal = previousTotal + 3;
+            totalTargetEl.textContent = incrementTotal;
         break;
     
         case 4:
@@ -120,6 +138,8 @@ function playBall(){
             dialogueBox.textContent = "Great shot to the boundary, 4 runs";
             incrementRuns = batRuns + 4;
             batsmanUpdate.textContent = incrementRuns;
+            incrementTotal = previousTotal + 4;
+            totalTargetEl.textContent = incrementTotal;
         break;
     
         case 6:
@@ -127,6 +147,8 @@ function playBall(){
             dialogueBox.textContent = "That has gone like a rocket and cleared the boundary ropes by a mile, Max 6 runs";
             incrementRuns = batRuns + 6;
             batsmanUpdate.textContent = incrementRuns;
+            incrementTotal = previousTotal + 6;
+            totalTargetEl.textContent = incrementTotal;
         break;
     
         case "Owzthat":
@@ -135,8 +157,6 @@ function playBall(){
     
     }
 }
-
-
 
 /**
  * umpire function: generates random number and compares random number with umpire array. 
