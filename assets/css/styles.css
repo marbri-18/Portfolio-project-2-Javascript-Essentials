@@ -38,3 +38,62 @@ nav > a:hover {
 
 /* Game Play page styles */
 
+#scoreboard-area {
+    background-color: #000;
+    color: #fff;
+    letter-spacing: .2rem;
+    font-size:2rem;
+    padding: 20px;
+}
+
+.score-box {
+    border: 2px #444 solid;
+    background-color: #222;
+    padding: 5px;
+    margin-left: 20px;
+    text-align: right;
+}
+
+.batsman-label {
+    text-align: right;
+}
+
+.batsman-score {
+    text-align: center;
+}
+
+.batsman-score > span {
+    position: relative;
+    left: 45px;
+}
+
+.innings-total {
+    text-align: center;
+}
+
+.wickets {
+    text-align:center;
+}    
+
+.last-wicket {
+    text-align:center;
+}
+
+.last-batsman {
+    text-align:center;
+}
+
+.result-message {
+    background-color: #fff;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 75%;
+    margin: 25px auto;
+    
+}
+
+.button {
+    text-align: center;
+}
+
+/* Scorecard*/
