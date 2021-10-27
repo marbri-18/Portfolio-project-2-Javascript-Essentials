@@ -1,13 +1,25 @@
 // Event listener - game start button
+let startGame = document.getElementById("start-game");
+    startGame.addEventListener("click", function(){
+        gameStart();
+    });
 //Event listener - next ball button
+let nextBall = document.getElementById("play-ball");
+    nextBall.addEventListener("click", function(){
+        playBall();
+    });
 //Event listener - OWZthat button
+let callUmpire = document.getElementById("play-Owzthat");
+    callUmpire.addEventListener("click", function(){
+        umpire();
+    });
 
 /**
  * gameStart function: Resets scores, scoreboard and scorecard to zero.
  * Calls generate computer score function
  */
 function gameStart(){
-
+    alert(`gameStart() has been called`);
 }
 
 /**
@@ -28,7 +40,7 @@ function generateScore(){
  * If runs > target game ends and end game function called.                                                                                                                                                                                                
  */
 function playBall(){
-
+    alert(`playBall() has been called`);
 }
 
 /**
@@ -38,7 +50,7 @@ function playBall(){
  * If wicket calls wicket function.
  */
 function umpire(){
-
+    alert(`umpire() has been called`);
 }
 
 /**
@@ -67,5 +79,5 @@ function wicket(){
  * endGame function: processes result and displays relevant result message
  */
 function endGame(){
-    
+
 }
