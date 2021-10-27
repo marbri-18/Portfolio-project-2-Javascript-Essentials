@@ -8,3 +8,33 @@ body {
     background-size: 100% 100%;
     padding-top: 50px;
 }
+
+h1 {
+    width: 30%;
+    margin: 0 auto;
+    background: navy;
+    color: #fff;
+    text-align: center;
+    padding: 1%;
+    font-size: 3rem;
+}
+
+nav {
+    text-align: right;
+    padding: 20px 0;
+}
+
+nav > a {
+    background-color: #fff;
+    padding: 10px 10px;
+    color: #222;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+/* Game Play page styles */
+
