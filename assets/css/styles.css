@@ -139,3 +139,9 @@ nav > a:hover {
     font-size: 1.6rem;
     font-weight: bold;   
 }
+
+/* Rules page styles*/
+#rules-area {
+    background-color: #000;
+    color: #fff;    
+}
