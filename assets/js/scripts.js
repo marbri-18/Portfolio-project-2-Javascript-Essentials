@@ -229,7 +229,22 @@ dialogueBox.textContent = decision;
  * If runs > target game ends and end game function called. 
  */
 function extras(decision){
+    switch (decision){
+        case "leg-bye":            
+            dialogueBox.textContent = "A leg-bye to be added to the extras column. Select next ball to carry on batting";
+        break;
+        
+        case "bye":            
+            dialogueBox.textContent = "A bye added to the extras. Continue batting by selecting next ball";
+        break;
 
+        case "no ball":            
+            dialogueBox.textContent = "A bye added to the extras. Carry on batting. Select next ball";
+        break;
+
+        case "wide":            
+            dialogueBox.textContent = "That one has gone wide! Another run for the extras. Keep on batting. Select the next ball button.";
+        break;
 }
 
 /**
