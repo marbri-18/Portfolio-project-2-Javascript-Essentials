@@ -198,6 +198,7 @@ function incrementRuns(runs){
 }
 
 function incrementExtras(extras){
+    
     let previousExtras = parseInt(document.getElementById('extras').innerText);
     let extrasUpdate = document.getElementById("extras"); 
 
@@ -224,13 +225,16 @@ function umpire(){
     
     let decision = umpire[appeal];
     let dialogueBox = document.getElementById("dialogue-box");
-    dialogueBox.textContent ="Umpires decision pending";
+    dialogueBox.textContent ="Umpire's decision pending";
 // set timeout here
 if(appeal <= 3){
+    
     extras(decision);
-} else if (appeal >= 8){
-    wicket(decision);
+} else if (appeal >= 7){
+    
+   wicket(decision);
 } else {
+    
 dialogueBox.textContent = decision;
 }
 
@@ -243,35 +247,39 @@ dialogueBox.textContent = decision;
  * If runs > target game ends and end game function called. 
  */
 function extras(decision){
+    
  numExtras = Math.floor(Math.random() * 4 + 1);
-
+ let dialogueBox = document.getElementById("dialogue-box");
     switch (decision){
-        case "leg-bye":            
+        case "leg-bye":
+            incrementExtras(1);            
             dialogueBox.textContent = "A leg-bye to be added to the extras column. Select next ball to carry on batting";
-            incrementExtras(1);
+            
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
         break;
         
-        case "bye":            
-            dialogueBox.textContent = numExtras + "Bye(s) added to the extras. Continue batting by selecting next ball";
-            incrementExtras(numExtras);
+        case "bye":
+            incrementExtras(numExtras);            
+            dialogueBox.textContent = numExtras + " Bye(s) added to the extras. Continue batting by selecting next ball";
+            
             if(numExtras %2 > 0){
-                batA.classList.toggle("on-strike");
+            batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
             }
         break;
 
-        case "no ball":            
+        case "no ball":
+            incrementExtras(1);           
             dialogueBox.textContent = "A no ball. One more added to the extras. Carry on batting. Select next ball";
-            incrementExtras(1);
+            
         break;
 
-        case "wide":            
+        case "wide":
+            incrementExtras(numExtras);          
             dialogueBox.textContent = "That one has gone wide! Another " + numExtras + " run(s) for the extras. Keep on batting. Select the next ball button.";
-            incrementExtras(numExtras);
             if(numExtras %2 > 0){
-                batA.classList.toggle("on-strike");
+            batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
             }
         break;
@@ -287,9 +295,8 @@ function extras(decision){
  * If wickets tally = 10, calls end game function. 
  * If wickets tally < 10 displays message to user to continue
  */
-function wicket(decision){
-    alert("wicket function called");
-    alert(decision);
+function wicket(){
+    alert("wicket called");
 
 }
 
