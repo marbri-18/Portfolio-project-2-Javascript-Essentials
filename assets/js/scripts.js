@@ -23,11 +23,14 @@ let callUmpire = document.getElementById("play-Owzthat");
 /**
  * gameStart function: Resets scores, scoreboard and scorecard to zero.
  * Calls generate computer score function
+ * disable Owzthat button - until Owzthat rolled
  */
 function gameStart(){
+    // choose team - difficulty level. pass difficulty level as parameter to generateScore()
     // generateScore()
+    //disable Owzthat button
     let dialogueBox = document.getElementById("dialogue-box");
-let msg = "Welcome to Lords on a beautiful sunny day. The opposition have batted first and scored []. Can you beat this target? Click on next ball to start your innings";
+let msg = "Welcome to Lords on a glorious sunny day. The opposition have batted first and scored []. Can you beat this target? Click on next ball to start your innings";
 dialogueBox.textContent = msg;
 }
 
@@ -168,6 +171,7 @@ function playBall(){
     
         case "Owzthat":
             dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Roll the umpire die to learn your fate";
+            // enable Owzthat button
         break;
     
     }
@@ -200,7 +204,7 @@ function incrementRuns(runs){
  * If wicket calls wicket function.
  */
 function umpire(){
-    alert(`umpire() has been called`);
+    
     let umpire = ["leg-bye", "bye", "no ball", "wide", "not out", "dropped catch", "Run out attempt! - close but not out", "caught", "bowled", "LBW", "Run Out", "stumped" ];
     let appeal = Math.floor(Math.random() * 12);
     
@@ -208,6 +212,13 @@ function umpire(){
     let dialogueBox = document.getElementById("dialogue-box");
     dialogueBox.textContent ="Umpires decision pending";
 // set timeout here
+if(appeal <= 3){
+    extras(decision);
+} else if (appeal >= 8){
+    wicket(decision);
+} else {
+dialogueBox.textContent = decision;
+}
 
 }
 
@@ -217,7 +228,7 @@ function umpire(){
  * Compares total runs tally against target if runs < target game continues.
  * If runs > target game ends and end game function called. 
  */
-function extras(){
+function extras(decision){
 
 }
 
@@ -225,11 +236,14 @@ function extras(){
  * wicket function: switches to next batsman. 
  * Resets the batsman score to zero and adds on-strike class to new batsman. 
  * Increments the wickets tally. Updates the scoreboard and scorecard. 
+ * disable Owzthat button
  * Checks wickets tally. 
  * If wickets tally = 10, calls end game function. 
  * If wickets tally < 10 displays message to user to continue
  */
-function wicket(){
+function wicket(decision){
+    alert("wicket function called");
+    alert(decision);
 
 }
 
