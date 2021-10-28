@@ -193,6 +193,14 @@ function incrementRuns(runs){
  */
 function umpire(){
     alert(`umpire() has been called`);
+    let umpire = ["leg-bye", "bye", "no ball", "wide", "not out", "dropped catch", "Run out attempt! - close but not out", "caught", "bowled", "LBW", "Run Out", "stumped" ];
+    let appeal = Math.floor(Math.random() * 12);
+    
+    let decision = umpire[appeal];
+    let dialogueBox = document.getElementById("dialogue-box");
+    dialogueBox.textContent ="Umpires decision pending";
+// set timeout here
+
 }
 
 /**
