@@ -52,6 +52,11 @@ function playBall(){
     
     //let batRuns = parseInt(document.getElementsByClassName('on-strike')[0].innerText); 
     let dialogueBox = document.getElementById("dialogue-box");
+    dialogueBox.textContent = "The bowler is running in ... ";
+    //set time-out
+    dialogueBox.textContent = " ... He delivers the ball";
+    // set time out
+    
     //let batsmanUpdate = document.getElementsByClassName("on-strike")[0];
     //let incrementRuns;
     //let totalTargetEl = document.getElementById("innings-total-score");
