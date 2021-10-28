@@ -50,14 +50,13 @@ function playBall(){
     let ball = Math.floor(Math.random() * 11);    
     let runs = batDie[ball];
     
-    let batRuns = parseInt(document.getElementsByClassName('on-strike')[0].innerText); 
+    //let batRuns = parseInt(document.getElementsByClassName('on-strike')[0].innerText); 
     let dialogueBox = document.getElementById("dialogue-box");
-    let batsmanUpdate = document.getElementsByClassName("on-strike")[0];
-    let incrementRuns;
-    let totalTargetEl = document.getElementById("innings-total-score");
-    let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
-   
-    let incrementTotal;
+    //let batsmanUpdate = document.getElementsByClassName("on-strike")[0];
+    //let incrementRuns;
+    //let totalTargetEl = document.getElementById("innings-total-score");
+    //let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
+    //let incrementTotal;
     
     let batA = document.getElementById("batA");
     let batB = document.getElementById("batB");
@@ -74,81 +73,89 @@ function playBall(){
     
         case "1a":            
             dialogueBox.textContent = "Well done, You've sneaked it through the infield for one run";
-            incrementRuns = batRuns + 1;
-            batsmanUpdate.textContent = incrementRuns;
+            incrementRuns(1);
+            //incrementRuns = batRuns + 1;
+            //batsmanUpdate.textContent = incrementRuns;
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
-            incrementTotal = previousTotal + 1;
-            totalTargetEl.textContent = incrementTotal;
+            //incrementTotal = previousTotal + 1;
+            //totalTargetEl.textContent = incrementTotal;
         break;
     
         case "1b":
             
             dialogueBox.textContent = "quick single, well run";
-            incrementRuns = batRuns +1;
-            batsmanUpdate.textContent = incrementRuns;
+            incrementRuns(1);
+            //incrementRuns = batRuns +1;
+            //batsmanUpdate.textContent = incrementRuns;
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
-            incrementTotal = previousTotal + 1;
-            totalTargetEl.textContent = incrementTotal;
+            //incrementTotal = previousTotal + 1;
+            //totalTargetEl.textContent = incrementTotal;
         break;
     
         case "1c":
             
             dialogueBox.textContent = "Nice shot for a comfortable single";
-            incrementRuns = batRuns + 1;
-            batsmanUpdate.textContent = incrementRuns;
+            incrementRuns(1);
+            //incrementRuns = batRuns + 1;
+            //batsmanUpdate.textContent = incrementRuns;
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
-            incrementTotal = previousTotal + 1;
-            totalTargetEl.textContent = incrementTotal;
+            //incrementTotal = previousTotal + 1;
+            //totalTargetEl.textContent = incrementTotal;
         break;
     
         case "2a":
             
             dialogueBox.textContent = "good shot, two runs taken";
-            incrementRuns = batRuns + 2;
-            batsmanUpdate.textContent = incrementRuns;
-            incrementTotal = previousTotal + 2;
-            totalTargetEl.textContent = incrementTotal;
+            incrementRuns(2);
+            //incrementRuns = batRuns + 2;
+            //batsmanUpdate.textContent = incrementRuns;
+            //incrementTotal = previousTotal + 2;
+            //totalTargetEl.textContent = incrementTotal;
         break;
 
         case "2b":
             
             dialogueBox.textContent = "guided into the outfield for an easy two runs";
-            incrementRuns = batRuns + 2;
-            batsmanUpdate.textContent = incrementRuns;
-            incrementTotal = previousTotal + 2;
-            totalTargetEl.textContent = incrementTotal;
+            incrementRuns(2);
+            //incrementRuns = batRuns + 2;
+            //batsmanUpdate.textContent = incrementRuns;
+            //incrementTotal = previousTotal + 2;
+            //totalTargetEl.textContent = incrementTotal;
         break;
     
         case 3:
             
             dialogueBox.textContent = "Nice hit but fielded in the deep, Well run for three";
-            incrementRuns = batRuns + 3;
-            batsmanUpdate.textContent = incrementRuns;
+            incrementRuns(3);
+            //incrementRuns = batRuns + 3;
+            //batsmanUpdate.textContent = incrementRuns;
             batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
-            incrementTotal = previousTotal + 3;
-            totalTargetEl.textContent = incrementTotal;
+            //incrementTotal = previousTotal + 3;
+            //totalTargetEl.textContent = incrementTotal;
         break;
     
         case 4:
             
             dialogueBox.textContent = "Great shot to the boundary, 4 runs";
-            incrementRuns = batRuns + 4;
-            batsmanUpdate.textContent = incrementRuns;
-            incrementTotal = previousTotal + 4;
-            totalTargetEl.textContent = incrementTotal;
+            incrementRuns(4);
+            //incrementRuns = batRuns + 4;
+            //batsmanUpdate.textContent = incrementRuns;
+            //incrementTotal = previousTotal + 4;
+            //totalTargetEl.textContent = incrementTotal;
         break;
     
         case 6:
             
             dialogueBox.textContent = "That has gone like a rocket and cleared the boundary ropes by a mile, Max 6 runs";
-            incrementRuns = batRuns + 6;
-            batsmanUpdate.textContent = incrementRuns;
-            incrementTotal = previousTotal + 6;
-            totalTargetEl.textContent = incrementTotal;
+            incrementRuns(6);
+            //incrementRuns = batRuns + 6;
+            //batsmanUpdate.textContent = incrementRuns;
+            //incrementTotal = previousTotal + 6;
+            //totalTargetEl.textContent = incrementTotal;
         break;
     
         case "Owzthat":
@@ -156,6 +163,26 @@ function playBall(){
         break;
     
     }
+}
+
+/**
+ * incrementRuns function: increments runs for batsmen, extras and totals and decrements Runs remaining on scoreboard and scorecard.
+ */
+
+function incrementRuns(runs){
+    let batRuns = parseInt(document.getElementsByClassName('on-strike')[0].innerText);
+    let batsmanUpdate = document.getElementsByClassName("on-strike")[0];
+    let incrementRuns; 
+
+    incrementRuns = batRuns + runs;
+    batsmanUpdate.textContent = incrementRuns;
+
+    let totalTargetEl = document.getElementById("innings-total-score");
+    let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
+    let incrementTotal;
+
+    incrementTotal = previousTotal + runs;
+    totalTargetEl.textContent = incrementTotal;
 }
 
 /**
