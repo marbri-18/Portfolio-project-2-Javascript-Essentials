@@ -83,6 +83,10 @@ nav > a:hover {
     text-align:center;
 }
 
+.extras {
+    text-align: center;
+}
+
 .result-message {
     background-color: #fff;
     border: 1px black solid;
