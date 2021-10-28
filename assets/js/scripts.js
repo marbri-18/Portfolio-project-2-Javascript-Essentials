@@ -197,6 +197,20 @@ function incrementRuns(runs){
     totalTargetEl.textContent = incrementTotal;
 }
 
+function incrementExtras(extras){
+    let previousExtras = parseInt(document.getElementById('extras').innerText);
+    let extrasUpdate = document.getElementById("extras"); 
+
+    let incrementExtras = previousExtras + extras;
+    extrasUpdate.textContent = incrementExtras;
+
+    let totalTargetEl = document.getElementById("innings-total-score");
+    let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
+
+    let incrementTotal = previousTotal + extras;
+    totalTargetEl.textContent = incrementTotal;
+}
+
 /**
  * umpire function: generates random number and compares random number with umpire array. 
  * If not out displays message to user to continue.
@@ -229,22 +243,39 @@ dialogueBox.textContent = decision;
  * If runs > target game ends and end game function called. 
  */
 function extras(decision){
+ numExtras = Math.floor(Math.random() * 4 + 1);
+
     switch (decision){
         case "leg-bye":            
             dialogueBox.textContent = "A leg-bye to be added to the extras column. Select next ball to carry on batting";
+            incrementExtras(1);
+            batA.classList.toggle("on-strike");
+            batB.classList.toggle("on-strike");
         break;
         
         case "bye":            
-            dialogueBox.textContent = "A bye added to the extras. Continue batting by selecting next ball";
+            dialogueBox.textContent = numExtras + "Bye(s) added to the extras. Continue batting by selecting next ball";
+            incrementExtras(numExtras);
+            if(numExtras %2 > 0){
+                batA.classList.toggle("on-strike");
+            batB.classList.toggle("on-strike");
+            }
         break;
 
         case "no ball":            
-            dialogueBox.textContent = "A bye added to the extras. Carry on batting. Select next ball";
+            dialogueBox.textContent = "A no ball. One more added to the extras. Carry on batting. Select next ball";
+            incrementExtras(1);
         break;
 
         case "wide":            
-            dialogueBox.textContent = "That one has gone wide! Another run for the extras. Keep on batting. Select the next ball button.";
+            dialogueBox.textContent = "That one has gone wide! Another " + numExtras + " run(s) for the extras. Keep on batting. Select the next ball button.";
+            incrementExtras(numExtras);
+            if(numExtras %2 > 0){
+                batA.classList.toggle("on-strike");
+            batB.classList.toggle("on-strike");
+            }
         break;
+    }
 }
 
 /**
