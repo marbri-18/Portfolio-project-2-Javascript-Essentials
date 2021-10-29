@@ -346,6 +346,7 @@ function extras(decision){
 function wicket(decision){
     alert("Hello from wicket");
     let dialogueBox = document.getElementById("dialogue-box");
+    let batWkt = parseInt(document.getElementsByClassName('on-strike')[0].innerText);
     let batWktUpdate = document.getElementsByClassName('on-strike')[0];
     let batWktLabel = document.getElementsByClassName("on-strike-Num")[0];
     let batALabel = parseInt(document.getElementById("batNumA").innerText);    
@@ -355,8 +356,9 @@ function wicket(decision){
     let wktCount = parseInt(document.getElementById("wickets-count").innerText);
     let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
     let lastWkt = document.getElementById("last-wicket");
+    let lastBatsman = document.getElementById("last-bat");
    
-
+    lastBatsman.innerText = batWkt;
     batWktUpdate.innerText = 0;
     wktUpdate.innerText = wktCount + 1;
     lastWkt.innerText = previousTotal;
