@@ -359,6 +359,7 @@ function wicket(decision){
 
     batWktUpdate.innerText = 0;
     wktUpdate.innerText = wktCount + 1;
+    lastWkt.innerText = previousTotal;
         
 
     if(batALabel > batBLabel){
