@@ -344,8 +344,16 @@ function extras(decision){
  * If wickets tally < 10 displays message to user to continue
  */
 function wicket(){
-    let batwkt = parseInt(document.getElementsByClassName('on-strike')[0].innerText);
-    let batwktUpdate = document.getElementsByClassName("on-strike")[0];
+    let batWkt = parseInt(document.getElementsByClassName('on-strike-Num')[0].innerText);
+    let batWktUpdate = document.getElementsByClassName("on-strike-Num")[0];
+    let nonStriker = parseInt(document.getElementsByClassName('non-striker-Num')[0].innerText);
+    batWktUpdate.innerText = "0";
+
+    if(batWkt > nonStriker){
+        batWktUpdate.innerText = batWkt++;
+    } else {
+        batWktUpdate = nonStriker++;
+    }
 
 }
 
