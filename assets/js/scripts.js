@@ -359,13 +359,13 @@ function extras(decision){
  * If wickets tally < 10 displays message to user to continue
  */
 function wicket(decision){
-    alert("Hello from wicket");
     let dialogueBox = document.getElementById("dialogue-box");
     let batWkt = parseInt(document.getElementsByClassName('on-strike')[0].innerText);
     let batWktUpdate = document.getElementsByClassName('on-strike')[0];
     let batWktLabel = document.getElementsByClassName("on-strike-Num")[0];
     let batALabel = parseInt(document.getElementById("batNumA").innerText); 
     let batBLabel = parseInt(document.getElementById("batNumB").innerText);
+    
     
     let wktUpdate = document.getElementById("wickets-count");
     let wktCount = parseInt(document.getElementById("wickets-count").innerText);
@@ -380,10 +380,11 @@ function wicket(decision){
         
 
     if(batALabel > batBLabel){
-        batWktLabel.innerText = batALabel++;
+        batWktLabel.innerText = batALabel + 1;
     } else {
-        batWktLabel.innerText = batBLabel++;
+        batWktLabel.innerText = batBLabel + 1;
     }
+    
 
     dialogueBox.textContent = "You're out!! The umpire's decision is " + decision;
 
