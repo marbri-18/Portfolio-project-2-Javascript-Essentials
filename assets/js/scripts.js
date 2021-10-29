@@ -26,12 +26,15 @@ let callUmpire = document.getElementById("play-Owzthat");
  * disable Owzthat button - until Owzthat rolled
  */
 function gameStart(){
+    let target = generateScore();
     // choose team - difficulty level. pass difficulty level as parameter to generateScore()
     // generateScore()
     //disable Owzthat button
     let dialogueBox = document.getElementById("dialogue-box");
-    let msg = "Welcome to Lords on a glorious sunny day. The opposition have batted first and scored []. Can you beat this target? Click on next ball to start your innings";
+    let msg = "Welcome to Lords on a glorious sunny day. The opposition have batted first and scored " + target + ". Can you beat this target? Click on next ball to start your innings";
     dialogueBox.textContent = msg;
+    let scoreboardTarget = document.getElementById("score-to-beat");
+    scoreboardTarget.innerText = target;
 }
 
 /**
@@ -40,6 +43,10 @@ function gameStart(){
  * sets scoreboard target and runs required
  */
 function generateScore(){
+    let initialScore = 100
+    let randomComponent = Math.floor(Math.random() * 250);
+    let scoreToBeat = initialScore + randomComponent;
+    return scoreToBeat;
 
 }
 
@@ -349,7 +356,7 @@ function wicket(decision){
     let batWkt = parseInt(document.getElementsByClassName('on-strike')[0].innerText);
     let batWktUpdate = document.getElementsByClassName('on-strike')[0];
     let batWktLabel = document.getElementsByClassName("on-strike-Num")[0];
-    let batALabel = parseInt(document.getElementById("batNumA").innerText);    
+    let batALabel = parseInt(document.getElementById("batNumA").innerText); 
     let batBLabel = parseInt(document.getElementById("batNumB").innerText);
     
     let wktUpdate = document.getElementById("wickets-count");
