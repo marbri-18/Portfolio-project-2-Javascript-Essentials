@@ -71,7 +71,7 @@ function playBall(){
     
     let batA = document.getElementById("batA");
     let batB = document.getElementById("batB");
-    let batNumA = document.getElementbyId("batNumA");
+    let batNumA = document.getElementById("batNumA");
     let batNumB = document.getElementById("batNumB");
     //let total = parseInt(document.getElementById("innings-total-score").innerText);
 
@@ -224,7 +224,7 @@ function incrementRuns(runs){
 }
 
 function incrementExtras(extras){
-    
+    alert("Hello from incrementExtras");
     let previousExtras = parseInt(document.getElementById('extras').innerText);
     let extrasUpdate = document.getElementById("extras"); 
 
@@ -273,12 +273,13 @@ dialogueBox.textContent = decision;
  * If runs > target game ends and end game function called. 
  */
 function extras(decision){
+    alert("Hello from extras");
     
  numExtras = Math.floor(Math.random() * 4 + 1);
  let dialogueBox = document.getElementById("dialogue-box");
     let batA = document.getElementById("batA");
     let batB = document.getElementById("batB");
-    let batNumA = document.getElementbyId("batNumA");
+    let batNumA = document.getElementById("batNumA");
     let batNumB = document.getElementById("batNumB");
     switch (decision){
         case "leg-bye":
@@ -305,9 +306,9 @@ function extras(decision){
                 batA.classList.toggle("non-striker");
                 batB.classList.toggle("non-striker");
                 batNumA.classList.toggle("on-strike-Num");
-            batNumB.classList.toggle("on-strike-Num");
-            batNumA.classList.toggle("non-striker-Num");
-            batNumB.classList.toggle("non-striker-Num");
+                batNumB.classList.toggle("on-strike-Num");
+                batNumA.classList.toggle("non-striker-Num");
+                batNumB.classList.toggle("non-striker-Num");
             }
         break;
 
@@ -326,9 +327,9 @@ function extras(decision){
                 batA.classList.toggle("non-striker");
                 batB.classList.toggle("non-striker");
                 batNumA.classList.toggle("on-strike-Num");
-            batNumB.classList.toggle("on-strike-Num");
-            batNumA.classList.toggle("non-striker-Num");
-            batNumB.classList.toggle("non-striker-Num");
+                batNumB.classList.toggle("on-strike-Num");
+                batNumA.classList.toggle("non-striker-Num");
+                batNumB.classList.toggle("non-striker-Num");
             }
         break;
     }
@@ -343,17 +344,25 @@ function extras(decision){
  * If wickets tally = 10, calls end game function. 
  * If wickets tally < 10 displays message to user to continue
  */
-function wicket(){
-    let batWkt = parseInt(document.getElementsByClassName('on-strike-Num')[0].innerText);
-    let batWktUpdate = document.getElementsByClassName("on-strike-Num")[0];
-    let nonStriker = parseInt(document.getElementsByClassName('non-striker-Num')[0].innerText);
-    batWktUpdate.innerText = "0";
+function wicket(decision){
+    alert("Hello from wicket");
+    let dialogueBox = document.getElementById("dialogue-box");
+    let batWktUpdate = document.getElementsByClassName('on-strike')[0];
+    let batWktLabel = document.getElementsByClassName("on-strike-Num")[0];
+    let batALabel = parseInt(document.getElementById("batNumA").innerText);    
+    let batBLabel = parseInt(document.getElementById("batNumB").innerText);
+   
 
-    if(batWkt > nonStriker){
-        batWktUpdate.innerText = batWkt++;
+    batWktUpdate.innerText = "0";
+        
+
+    if(batALabel > batBLabel){
+        batWktLabel.innerText = batALabel++;
     } else {
-        batWktUpdate = nonStriker++;
+        batWktLabel.innerText = batBLabel++;
     }
+
+    dialogueBox.textContent = "You're out!! The umpire's decision is " + decision;
 
 }
 
