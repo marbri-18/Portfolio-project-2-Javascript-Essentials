@@ -30,8 +30,8 @@ function gameStart(){
     // generateScore()
     //disable Owzthat button
     let dialogueBox = document.getElementById("dialogue-box");
-let msg = "Welcome to Lords on a glorious sunny day. The opposition have batted first and scored []. Can you beat this target? Click on next ball to start your innings";
-dialogueBox.textContent = msg;
+    let msg = "Welcome to Lords on a glorious sunny day. The opposition have batted first and scored []. Can you beat this target? Click on next ball to start your innings";
+    dialogueBox.textContent = msg;
 }
 
 /**
@@ -93,10 +93,10 @@ function playBall(){
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
-            batNumA.classList.toggle("on-strike");
-            batNumB.classList.toggle("on-strike");
-            batNumA.classList.toggle("non-striker");
-            batNumB.classList.toggle("non-striker");
+            batNumA.classList.toggle("on-strike-Num");
+            batNumB.classList.toggle("on-strike-Num");
+            batNumA.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num");
             //incrementTotal = previousTotal + 1;
             //totalTargetEl.textContent = incrementTotal;
         break;
@@ -111,10 +111,10 @@ function playBall(){
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
-            batNumA.classList.toggle("on-strike");
-            batNumB.classList.toggle("on-strike");
-            batNumA.classList.toggle("non-striker");
-            batNumB.classList.toggle("non-striker");
+            batNumA.classList.toggle("on-strike-Num");
+            batNumB.classList.toggle("on-strike-Num");
+            batNumA.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num");
             //incrementTotal = previousTotal + 1;
             //totalTargetEl.textContent = incrementTotal;
         break;
@@ -129,10 +129,10 @@ function playBall(){
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
-            batNumA.classList.toggle("on-strike");
-            batNumB.classList.toggle("on-strike");
-            batNumA.classList.toggle("non-striker");
-            batNumB.classList.toggle("non-striker");
+            batNumA.classList.toggle("on-strike-Num");
+            batNumB.classList.toggle("on-strike-Num");
+            batNumA.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num");
             //incrementTotal = previousTotal + 1;
             //totalTargetEl.textContent = incrementTotal;
         break;
@@ -167,10 +167,10 @@ function playBall(){
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
-            batNumA.classList.toggle("on-strike");
-            batNumB.classList.toggle("on-strike");
-            batNumA.classList.toggle("non-striker");
-            batNumB.classList.toggle("non-striker");
+            batNumA.classList.toggle("on-strike-Num");
+            batNumB.classList.toggle("on-strike-Num");
+            batNumA.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num");
             //incrementTotal = previousTotal + 3;
             //totalTargetEl.textContent = incrementTotal;
         break;
@@ -276,7 +276,7 @@ function extras(decision){
     
  numExtras = Math.floor(Math.random() * 4 + 1);
  let dialogueBox = document.getElementById("dialogue-box");
- let batA = document.getElementById("batA");
+    let batA = document.getElementById("batA");
     let batB = document.getElementById("batB");
     let batNumA = document.getElementbyId("batNumA");
     let batNumB = document.getElementById("batNumB");
@@ -289,10 +289,10 @@ function extras(decision){
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
-            batNumA.classList.toggle("on-strike");
-            batNumB.classList.toggle("on-strike");
-            batNumA.classList.toggle("non-striker");
-            batNumB.classList.toggle("non-striker");
+            batNumA.classList.toggle("on-strike-Num");
+            batNumB.classList.toggle("on-strike-Num");
+            batNumA.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num");
         break;
         
         case "bye":
@@ -304,10 +304,10 @@ function extras(decision){
                 batB.classList.toggle("on-strike");
                 batA.classList.toggle("non-striker");
                 batB.classList.toggle("non-striker");
-                batNumA.classList.toggle("on-strike");
-                batNumB.classList.toggle("on-strike");
-                batNumA.classList.toggle("non-striker");
-                batNumB.classList.toggle("non-striker");
+                batNumA.classList.toggle("on-strike-Num");
+            batNumB.classList.toggle("on-strike-Num");
+            batNumA.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num");
             }
         break;
 
@@ -325,10 +325,10 @@ function extras(decision){
                 batB.classList.toggle("on-strike");
                 batA.classList.toggle("non-striker");
                 batB.classList.toggle("non-striker");
-                batNumA.classList.toggle("on-strike");
-                batNumB.classList.toggle("on-strike");
-                batNumA.classList.toggle("non-striker");
-                batNumB.classList.toggle("non-striker");
+                batNumA.classList.toggle("on-strike-Num");
+            batNumB.classList.toggle("on-strike-Num");
+            batNumA.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num");
             }
         break;
     }
