@@ -228,6 +228,10 @@ function incrementRuns(runs){
 
     incrementTotal = previousTotal + runs;
     totalTargetEl.textContent = incrementTotal;
+
+    let target = parseInt(document.getElementById("score-to-beat").innerText);
+    let runsRemaining = document.getElementById("runs-to-get");
+    runsRemaining.innerText = target - incrementTotal;
 }
 
 function incrementExtras(extras){
@@ -242,6 +246,10 @@ function incrementExtras(extras){
 
     let incrementTotal = previousTotal + extras;
     totalTargetEl.textContent = incrementTotal;
+
+    let target = parseInt(document.getElementById("score-to-beat").innerText);
+    let runsRemaining = document.getElementById("runs-to-get");
+    runsRemaining.innerText = target - incrementTotal;
 }
 
 /**
