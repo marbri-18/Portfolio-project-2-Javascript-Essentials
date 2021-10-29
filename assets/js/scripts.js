@@ -224,7 +224,6 @@ function incrementRuns(runs){
 }
 
 function incrementExtras(extras){
-    alert("Hello from incrementExtras");
     let previousExtras = parseInt(document.getElementById('extras').innerText);
     let extrasUpdate = document.getElementById("extras"); 
 
@@ -273,7 +272,7 @@ dialogueBox.textContent = decision;
  * If runs > target game ends and end game function called. 
  */
 function extras(decision){
-    alert("Hello from extras");
+    
     
  numExtras = Math.floor(Math.random() * 4 + 1);
  let dialogueBox = document.getElementById("dialogue-box");
@@ -351,9 +350,15 @@ function wicket(decision){
     let batWktLabel = document.getElementsByClassName("on-strike-Num")[0];
     let batALabel = parseInt(document.getElementById("batNumA").innerText);    
     let batBLabel = parseInt(document.getElementById("batNumB").innerText);
+    
+    let wktUpdate = document.getElementById("wickets-count");
+    let wktCount = parseInt(document.getElementById("wickets-count").innerText);
+    let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
+    let lastWkt = document.getElementById("last-wicket");
    
 
-    batWktUpdate.innerText = "0";
+    batWktUpdate.innerText = 0;
+    wktUpdate.innerText = wktCount + 1;
         
 
     if(batALabel > batBLabel){
