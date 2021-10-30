@@ -281,12 +281,14 @@ function wicket(decision){
     }
     
     dialogueBox.textContent = "You're out!! The umpire's decision is " + decision;
-
-    if(wktCount >= 10){
+    let wktTally = parseInt(document.getElementById("wickets-count").innerText);
+    if(wktTally >= 10){
         endGame();
     }
+    
+    }
 
-}
+
 
 /**
  * endGame function: processes result and displays relevant result message
