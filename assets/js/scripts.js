@@ -260,7 +260,7 @@ function incrementExtras(extras){
  */
 function umpire(){
     
-    let umpire = ["leg-bye", "bye", "no ball", "wide", "not out", "dropped catch", "Run out attempt! - close but not out", "caught", "bowled", "LBW", "Run Out", "stumped" ];
+    let umpire = ["leg-bye", "bye", "no ball", "wide", "not out", "not out", "not out", "caught", "bowled", "LBW", "Run Out", "stumped" ];
     let appeal = Math.floor(Math.random() * 12);
     
     let decision = umpire[appeal];
