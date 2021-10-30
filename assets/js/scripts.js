@@ -267,15 +267,15 @@ function umpire(){
     let dialogueBox = document.getElementById("dialogue-box");
     dialogueBox.textContent ="Umpire's decision pending";
 // set timeout here
-if(appeal <= 3){
-    
+if (appeal <= 3){
     extras(decision);
-} else if (appeal >= 7){
-    
-   wicket(decision);
+} else if (appeal > 3 && appeal < 7){
+    dialogueBox.textContent = "The umpires decision is Not Out. Select Next Ball to continue playing";
+}
+else if (appeal >= 7){
+    wicket(decision);
 } else {
-    
-dialogueBox.textContent = decision;
+    alert("No decision - try again");
 }
 
 }
