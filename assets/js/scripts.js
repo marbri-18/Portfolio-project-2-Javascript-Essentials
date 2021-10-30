@@ -76,10 +76,10 @@ function playBall(){
     //let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
     //let incrementTotal;
     
-    let batA = document.getElementById("batA");
+    /* let batA = document.getElementById("batA");
     let batB = document.getElementById("batB");
     let batNumA = document.getElementById("batNumA");
-    let batNumB = document.getElementById("batNumB");
+    let batNumB = document.getElementById("batNumB"); */
     //let total = parseInt(document.getElementById("innings-total-score").innerText);
 
     switch (runs){
@@ -94,16 +94,17 @@ function playBall(){
         case "1a":            
             dialogueBox.textContent = "Well done, You've sneaked it through the infield for one run";
             incrementRuns(1);
+            toggle();
             //incrementRuns = batRuns + 1;
             //batsmanUpdate.textContent = incrementRuns;
-            batA.classList.toggle("on-strike");
+            /* batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
             batNumA.classList.toggle("on-strike-Num");
             batNumB.classList.toggle("on-strike-Num");
             batNumA.classList.toggle("non-striker-Num");
-            batNumB.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num"); */
             //incrementTotal = previousTotal + 1;
             //totalTargetEl.textContent = incrementTotal;
         break;
@@ -112,16 +113,17 @@ function playBall(){
             
             dialogueBox.textContent = "quick single, well run";
             incrementRuns(1);
+            toggle();
             //incrementRuns = batRuns +1;
             //batsmanUpdate.textContent = incrementRuns;
-            batA.classList.toggle("on-strike");
+            /* batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
             batNumA.classList.toggle("on-strike-Num");
             batNumB.classList.toggle("on-strike-Num");
             batNumA.classList.toggle("non-striker-Num");
-            batNumB.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num"); */
             //incrementTotal = previousTotal + 1;
             //totalTargetEl.textContent = incrementTotal;
         break;
@@ -130,16 +132,17 @@ function playBall(){
             
             dialogueBox.textContent = "Nice shot for a comfortable single";
             incrementRuns(1);
+            toggle();
             //incrementRuns = batRuns + 1;
             //batsmanUpdate.textContent = incrementRuns;
-            batA.classList.toggle("on-strike");
+            /* batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
             batNumA.classList.toggle("on-strike-Num");
             batNumB.classList.toggle("on-strike-Num");
             batNumA.classList.toggle("non-striker-Num");
-            batNumB.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num"); */
             //incrementTotal = previousTotal + 1;
             //totalTargetEl.textContent = incrementTotal;
         break;
@@ -168,16 +171,17 @@ function playBall(){
             
             dialogueBox.textContent = "Nice hit but fielded in the deep, Well run for three";
             incrementRuns(3);
+            toggle();
             //incrementRuns = batRuns + 3;
             //batsmanUpdate.textContent = incrementRuns;
-            batA.classList.toggle("on-strike");
+            /* batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
             batNumA.classList.toggle("on-strike-Num");
             batNumB.classList.toggle("on-strike-Num");
             batNumA.classList.toggle("non-striker-Num");
-            batNumB.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num"); */
             //incrementTotal = previousTotal + 3;
             //totalTargetEl.textContent = incrementTotal;
         break;
@@ -234,17 +238,17 @@ function incrementRuns(runs){
     runsRemaining.innerText = target - incrementTotal;
 }
 
-function incrementExtras(extras){
+function incrementExtras(){
     let previousExtras = parseInt(document.getElementById('extras').innerText);
     let extrasUpdate = document.getElementById("extras"); 
 
-    let incrementExtras = previousExtras + extras;
+    let incrementExtras = previousExtras + 1;
     extrasUpdate.textContent = incrementExtras;
 
     let totalTargetEl = document.getElementById("innings-total-score");
     let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
 
-    let incrementTotal = previousTotal + extras;
+    let incrementTotal = previousTotal + 1;
     totalTargetEl.textContent = incrementTotal;
 
     let target = parseInt(document.getElementById("score-to-beat").innerText);
@@ -289,32 +293,34 @@ else if (appeal >= 7){
 function extras(decision){
     
     
- numExtras = Math.floor(Math.random() * 4 + 1);
+ // numExtras = Math.floor(Math.random() * 4 + 1);
  let dialogueBox = document.getElementById("dialogue-box");
-    let batA = document.getElementById("batA");
+    /* let batA = document.getElementById("batA");
     let batB = document.getElementById("batB");
     let batNumA = document.getElementById("batNumA");
-    let batNumB = document.getElementById("batNumB");
+    let batNumB = document.getElementById("batNumB"); */
     switch (decision){
         case "leg-bye":
-            incrementExtras(1);            
+            incrementExtras();
+            toggle();           
             dialogueBox.textContent = "A leg-bye to be added to the extras column. Select next ball to carry on batting";
             
-            batA.classList.toggle("on-strike");
+            /* batA.classList.toggle("on-strike");
             batB.classList.toggle("on-strike");
             batA.classList.toggle("non-striker");
             batB.classList.toggle("non-striker");
             batNumA.classList.toggle("on-strike-Num");
             batNumB.classList.toggle("on-strike-Num");
             batNumA.classList.toggle("non-striker-Num");
-            batNumB.classList.toggle("non-striker-Num");
+            batNumB.classList.toggle("non-striker-Num"); */
         break;
         
         case "bye":
-            incrementExtras(numExtras);            
-            dialogueBox.textContent = numExtras + " Bye(s) added to the extras. Continue batting by selecting next ball";
+            incrementExtras();
+            toggle();            
+            dialogueBox.textContent = " One bye added to the extras. Continue batting by selecting next ball";
             
-            if(numExtras %2 > 0){
+            /* if(numExtras %2 > 0){
                 batA.classList.toggle("on-strike");
                 batB.classList.toggle("on-strike");
                 batA.classList.toggle("non-striker");
@@ -323,19 +329,21 @@ function extras(decision){
                 batNumB.classList.toggle("on-strike-Num");
                 batNumA.classList.toggle("non-striker-Num");
                 batNumB.classList.toggle("non-striker-Num");
-            }
+    }*/
         break;
 
         case "no ball":
-            incrementExtras(1);           
+            incrementExtras();
+                      
             dialogueBox.textContent = "A no ball. One more added to the extras. Carry on batting. Select next ball";
             
         break;
 
         case "wide":
-            incrementExtras(numExtras);          
-            dialogueBox.textContent = "That one has gone wide! Another " + numExtras + " run(s) for the extras. Keep on batting. Select the next ball button.";
-            if(numExtras %2 > 0){
+            incrementExtras();
+                     
+            dialogueBox.textContent = "That one has gone wide! Another run for the extras. Keep on batting. Select the next ball button.";
+            /* if(numExtras %2 > 0){
                 batA.classList.toggle("on-strike");
                 batB.classList.toggle("on-strike");
                 batA.classList.toggle("non-striker");
@@ -344,7 +352,7 @@ function extras(decision){
                 batNumB.classList.toggle("on-strike-Num");
                 batNumA.classList.toggle("non-striker-Num");
                 batNumB.classList.toggle("non-striker-Num");
-            }
+            } */
         break;
     }
 }
@@ -395,4 +403,20 @@ function wicket(decision){
  */
 function endGame(){
 
+}
+
+function toggle(){
+    let batA = document.getElementById("batA");
+    let batB = document.getElementById("batB");
+    let batNumA = document.getElementById("batNumA");
+    let batNumB = document.getElementById("batNumB");
+    
+    batA.classList.toggle("on-strike");
+    batB.classList.toggle("on-strike");
+    batA.classList.toggle("non-striker");
+    batB.classList.toggle("non-striker");
+    batNumA.classList.toggle("on-strike-Num");
+    batNumB.classList.toggle("on-strike-Num");
+    batNumA.classList.toggle("non-striker-Num");
+    batNumB.classList.toggle("non-striker-Num");
 }
