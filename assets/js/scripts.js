@@ -153,7 +153,13 @@ function incrementRuns(runs){
     let target = parseInt(document.getElementById("score-to-beat").innerText);
     let runsRemaining = document.getElementById("runs-to-get");
     runsRemaining.innerText = target - incrementTotal;
+
+    let targetReached = parseInt(runsRemaining.innerText);
+    if(targetReached <= 0){
+        endGame()
+    }
 }
+
 
 function incrementExtras(){
     let previousExtras = parseInt(document.getElementById('extras').innerText);
@@ -171,6 +177,11 @@ function incrementExtras(){
     let target = parseInt(document.getElementById("score-to-beat").innerText);
     let runsRemaining = document.getElementById("runs-to-get");
     runsRemaining.innerText = target - incrementTotal;
+
+    let targetReached = parseInt(runsRemaining.innerText);
+    if(targetReached <= 0){
+        endGame()
+}
 }
 
 /**
@@ -271,13 +282,17 @@ function wicket(decision){
     
     dialogueBox.textContent = "You're out!! The umpire's decision is " + decision;
 
+    if(wktCount >= 10){
+        endGame();
+    }
+
 }
 
 /**
  * endGame function: processes result and displays relevant result message
  */
 function endGame(){
-
+    alert("Hello from End Game")
 }
 
 function toggle(){
