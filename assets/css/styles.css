@@ -99,3 +99,14 @@ nav > a:hover {
 .button {
     text-align: center;
 }
+
+dialog {
+    width: 400px;
+    height: 400px;
+    background-color: #aaa;
+    border: 2px double #000;
+}
+
+dialog::backdrop {
+    background: rgba(128, 128, 128, .5);
+}

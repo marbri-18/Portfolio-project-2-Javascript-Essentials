@@ -26,6 +26,7 @@ let callUmpire = document.getElementById("play-Owzthat");
  * disable Owzthat button - until Owzthat rolled
  */
 function gameStart(){
+    
     let target = generateScore();
     // choose team - difficulty level. pass difficulty level as parameter to generateScore()
     // generateScore()
