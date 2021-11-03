@@ -101,10 +101,12 @@ nav > a:hover {
 }
 
 dialog {
-    width: 400px;
-    height: 400px;
-    background-color: #aaa;
+    background-color: #ddd;
     border: 2px double #000;
+}
+
+dialog h1 {
+    width: 90%;
 }
 
 dialog::backdrop {
