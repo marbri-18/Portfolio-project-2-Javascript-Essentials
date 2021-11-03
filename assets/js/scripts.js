@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function onOpen() {
     gameStart();
 });
 // Event listener - game start button
@@ -26,7 +26,8 @@ let callUmpire = document.getElementById("play-Owzthat");
  * disable Owzthat button - until Owzthat rolled
  */
 function gameStart(){
-    
+    let startDialog = document.getElementById("startGame");
+    startDialog.showModal();
     let target = generateScore();
     // choose team - difficulty level. pass difficulty level as parameter to generateScore()
     // generateScore()
