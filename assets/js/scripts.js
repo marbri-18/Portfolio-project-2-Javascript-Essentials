@@ -28,6 +28,14 @@ let callUmpire = document.getElementById("play-Owzthat");
 function gameStart(){
     let startDialog = document.getElementById("startGame");
     startDialog.showModal();
+    let submitForm = document.getElementById("dialogue-submit");
+    submitForm.addEventListener("click", function (){
+        let inputs = document.getElementById("startForm").elements;
+        let firstName = inputs["firstName"].value;
+        let team = inputs["team"].value;
+        alert(firstName);
+        alert(team);
+    });
     let target = generateScore();
     // choose team - difficulty level. pass difficulty level as parameter to generateScore()
     // generateScore()
@@ -314,3 +322,6 @@ function toggle(){
     batNumA.classList.toggle("non-striker-Num");
     batNumB.classList.toggle("non-striker-Num");
 }
+
+/* DIALOGUE BOX */
+
