@@ -170,71 +170,75 @@ function playBall(){
     //let batRuns = parseInt(document.getElementsByClassName('on-strike')[0].innerText); 
     let dialogueBox = document.getElementById("dialogue-box");
     dialogueBox.textContent = "The bowler is running in ... ";
-    //set time-out
-    dialogueBox.textContent = " ... He delivers the ball";
-    // set time out
-
-    switch (runs){
-        case "0a":            
-            dialogueBox.textContent = "Well defended but no runs";
-        break;
+    setTimeout (function(){dialogueBox.textContent = " ... He delivers the ball";}, 1000);
     
-        case "0b":            
-            dialogueBox.textContent ="shot and miss, no runs";
-        break;
+    setTimeout(function(){
+        switch (runs){
+            case "0a":
+                //setTimeOut            
+                dialogueBox.textContent = "Well defended but no runs";
+            break;
+        
+            case "0b":            
+                dialogueBox.textContent ="shot and miss, no runs";
+            break;
+        
+            case "1a":            
+                dialogueBox.textContent = "Well done, You've sneaked it through the infield for one run";
+                incrementRuns(1);
+                toggle();            
+            break;
+        
+            case "1b":            
+                dialogueBox.textContent = "quick single, well run";
+                incrementRuns(1);
+                toggle();
+            break;
+        
+            case "1c":            
+                dialogueBox.textContent = "Nice shot for a comfortable single";
+                incrementRuns(1);
+                toggle();
+            break;
+        
+            case "2a":            
+                dialogueBox.textContent = "good shot, two runs taken";
+                incrementRuns(2);
+            break;
     
-        case "1a":            
-            dialogueBox.textContent = "Well done, You've sneaked it through the infield for one run";
-            incrementRuns(1);
-            toggle();            
-        break;
+            case "2b":
+                
+                dialogueBox.textContent = "guided into the outfield for an easy two runs";
+                incrementRuns(2);
+            break;
+        
+            case 3:
+                dialogueBox.textContent = "Nice hit but fielded in the deep, Well run for three";
+                incrementRuns(3);
+                toggle();
+            break;
+        
+            case 4:            
+                dialogueBox.textContent = "Great shot to the boundary, 4 runs";
+                incrementRuns(4);
+            break;
+        
+            case 6:            
+                dialogueBox.textContent = "That has gone like a rocket and cleared the boundary ropes by a mile, Max 6 runs";
+                incrementRuns(6);
+            break;
+        
+            case "Owzthat":
+                dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Click on the OWZthat button to learn your fate";
+                document.getElementById("play-Owzthat").disabled = false;
+                document.getElementById("play-ball").disabled = true;
+                // disable next ball button
+            break;  
+         
+        }
+    }, 2500)
     
-        case "1b":            
-            dialogueBox.textContent = "quick single, well run";
-            incrementRuns(1);
-            toggle();
-        break;
     
-        case "1c":            
-            dialogueBox.textContent = "Nice shot for a comfortable single";
-            incrementRuns(1);
-            toggle();
-        break;
-    
-        case "2a":            
-            dialogueBox.textContent = "good shot, two runs taken";
-            incrementRuns(2);
-        break;
-
-        case "2b":
-            
-            dialogueBox.textContent = "guided into the outfield for an easy two runs";
-            incrementRuns(2);
-        break;
-    
-        case 3:
-            dialogueBox.textContent = "Nice hit but fielded in the deep, Well run for three";
-            incrementRuns(3);
-            toggle();
-        break;
-    
-        case 4:            
-            dialogueBox.textContent = "Great shot to the boundary, 4 runs";
-            incrementRuns(4);
-        break;
-    
-        case 6:            
-            dialogueBox.textContent = "That has gone like a rocket and cleared the boundary ropes by a mile, Max 6 runs";
-            incrementRuns(6);
-        break;
-    
-        case "Owzthat":
-            dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Click on the OWZthat button to learn your fate";
-            document.getElementById("play-Owzthat").disabled = false;
-            document.getElementById("play-ball").disabled = true;
-            // disable next ball button
-        break;    
-    }
 }
 
 /**
@@ -307,10 +311,11 @@ function umpire(){
     let decision = umpire[appeal];
     let dialogueBox = document.getElementById("dialogue-box");
     dialogueBox.textContent ="Umpire's decision pending";
-// set timeout here
+
 if (appeal <= 3){
     extras(decision);
 } else if (appeal > 3 && appeal < 7){
+    // setTimeout here
     dialogueBox.textContent = "The umpires decision is Not Out. Select Next Ball to continue playing";
 }
 else if (appeal >= 7){
@@ -378,6 +383,9 @@ function wicket(decision){
     let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
     let lastWkt = document.getElementById("last-wicket");
     let lastBatsman = document.getElementById("last-bat");
+
+    //setTimeout here
+    dialogueBox.textContent = "You're out!! The umpire's decision is " + decision;
    
     lastBatsman.innerText = batWkt;
     batWktUpdate.innerText = 0;
@@ -390,7 +398,6 @@ function wicket(decision){
         batWktLabel.innerText = batBLabel + 1;
     }
     
-    dialogueBox.textContent = "You're out!! The umpire's decision is " + decision;
     let wktTally = parseInt(document.getElementById("wickets-count").innerText);
     if(wktTally >= 10){
         
