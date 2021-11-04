@@ -245,8 +245,9 @@ function incrementRuns(runs){
     runsRemaining.innerText = target - incrementTotal;
 
     let targetReached = parseInt(runsRemaining.innerText);
+    let wicketsFallen = parseInt(document.getElementById("wickets-count").innerText);
     if(targetReached <= 0){
-        endGameWin()
+        endGameWin(wicketsFallen, target)
     }
 }
 
@@ -268,9 +269,11 @@ function incrementExtras(){
     let runsRemaining = document.getElementById("runs-to-get");
     runsRemaining.innerText = target - incrementTotal;
 
+    let wicketsFallen = parseInt(document.getElementById("wickets-count").innerText);
+
     let targetReached = parseInt(runsRemaining.innerText);
     if(targetReached <= 0){
-        endGameWin()
+        endGameWin(wicketsFallen, target);
 }
 }
 
@@ -384,15 +387,26 @@ function wicket(decision){
 /**
  * endGame function: processes result and displays relevant result message
  */
-function endGameWin(){
+function endGameWin(wicketsFallen, target){
     
     let winDialogue = document.getElementById("endGameWin");
     winDialogue.showModal();
+    let winTarget = document.getElementById("winningTarget");
+    winTarget.innerText = "You were set " + target + " runs to win."
+    let fallenWickets = document.getElementById("winMargin");
+    let win = (10 - wicketsFallen);
+   fallenWickets.innerText = "You have reached this target and won by " + win + " wickets";
 }
 
     function endGameLose(previousTotal){
         let lossDialogue = document.getElementById("endGameDefeat");
         lossDialogue.showModal();
+        let winningTarget = parseInt(document.getElementById("score-to-beat").innerText);
+        let losingMargin = winningTarget - previousTotal;
+        let dialogueTargetMessage = document.getElementById("target-required");
+        let dialogueMarginMessage = document.getElementById("defeat-margin");
+        dialogueTargetMessage.innerText = "You were set a target of " + winningTarget + " to win";
+        dialogueMarginMessage.innerText = "You scored " + previousTotal + " runs all out. You have lost by " + losingMargin + " runs."; 
     }
 
     
