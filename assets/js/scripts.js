@@ -229,7 +229,7 @@ function playBall(){
         break;
     
         case "Owzthat":
-            dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Roll the umpire die to learn your fate";
+            dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Click on the OWZthat button to learn your fate";
             document.getElementById("play-Owzthat").disabled = false;
             document.getElementById("play-ball").disabled = true;
             // disable next ball button
