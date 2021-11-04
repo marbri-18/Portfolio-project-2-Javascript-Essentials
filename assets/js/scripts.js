@@ -28,29 +28,27 @@ let callUmpire = document.getElementById("play-Owzthat");
 function gameStart(){
     let startDialog = document.getElementById("startGame");
     startDialog.showModal();
-   let firstNameInput = document.getElementById("firstName");
+  /* let firstNameInput = document.getElementById("firstName");
     firstNameInput.addEventListener("input", function(event){
         if(event.validity.tooShort){
             event.setCustomValidity("The minimum number of characters for this field is 3")
         }
-    });
+    }); */
     
     let submitForm = document.getElementById("dialogue-submit");
-    submitForm.addEventListener("click", function (){
+    submitForm.addEventListener("click", function(){
         let inputs = document.getElementById("startForm").elements;
         let firstName = inputs["firstName"].value;
         let team = inputs["team"].value;
-    });
+        generateScore(team);
+            });
+
     
-    let target = generateScore();
+    
     // choose team - difficulty level. pass difficulty level as parameter to generateScore()
     // generateScore()
     //disable Owzthat button
-    let dialogueBox = document.getElementById("dialogue-box");
-    let msg = "Welcome to Lords on a glorious sunny day. The opposition have batted first and scored " + target + ". Can you beat this target? Click on next ball to start your innings";
-    dialogueBox.textContent = msg;
-    let scoreboardTarget = document.getElementById("score-to-beat");
-    scoreboardTarget.innerText = target;
+    
 }
 
 /**
@@ -58,27 +56,54 @@ function gameStart(){
  * displays message to user
  * sets scoreboard target and runs required
  */
-/*function generateScore(){
+function generateScore(teamSelected){
+    console.log(teamSelected);
     
 
-    if(submitForm === "New Zealand" || "Australia" || "India"){
-        let initialScore = 275;
-    } else if (submitForm === "England" || "Pakistan" || "South Africa"){
+   /* if(teamSelected === "New Zealand" || "Australia" || "India"){
+        initialScore = 275;
+    } else if (teamSelected === "England" || "Pakistan" || "South Africa"){
         initialScore = 225;
-    } else if (submitForm === "West Indies" || "Bangladesh" || "Sri Lanka"){
+    } else if (teamSelected === "West Indies" || "Bangladesh" || "Sri Lanka"){
         initialScore = 150;
-    } else if (submitForm === "Afghanistan" || "Ireland" || "Zimbabwe"){
+    } else if (teamSelected === "Afghanistan" || "Ireland" || "Zimbabwe"){
         initialScore = 75;
     } else {
         alert("No selected team recognised. Play with default level of easy or select Start new innings");
         initialScore = 150;
+    }*/
+let initialScore;
+    switch (teamSelected){
+        case "New Zealand":
+        initialScore = 275;
+        break;
+
+        case "England":
+            initialScore = 225;
+            break;
+
+        case "West Indies":
+            initialScore = 150;
+            break;
+
+        case "Afghanistan":
+            initialScore = 75;
+            break;
     }
+    console.log(initialScore);
+    console.log(typeof initialScore);
     
     let randomComponent = Math.floor(Math.random() * 100);
-    let scoreToBeat = initialScore + randomComponent;
-    return scoreToBeat;
+    console.log(randomComponent);
+    let target = initialScore + randomComponent;
+    
+    let dialogueBox = document.getElementById("dialogue-box");
+    let msg = "Welcome to Lords on a glorious sunny day. The opposition have batted first and scored " + target + ". Can you beat this target? Click on next ball to start your innings";
+    dialogueBox.textContent = msg;
+    let scoreboardTarget = document.getElementById("score-to-beat");
+    scoreboardTarget.innerText = target;
 
-}*/
+}
 
 /**
  * playBall function: generates random number and compares random number against batDie array.
