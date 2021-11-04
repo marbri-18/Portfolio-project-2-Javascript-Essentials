@@ -385,7 +385,7 @@ function wicket(decision){
  * endGame function: processes result and displays relevant result message
  */
 function endGameWin(){
-    alert("Hello from End Game")
+    
     let winDialogue = document.getElementById("endGameWin");
     winDialogue.showModal();
 }
