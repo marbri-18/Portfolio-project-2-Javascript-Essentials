@@ -112,3 +112,7 @@ dialog h1 {
 dialog::backdrop {
     background: rgba(128, 128, 128, .5);
 }
+
+input:invalid {
+    border: red 2px solid;
+}

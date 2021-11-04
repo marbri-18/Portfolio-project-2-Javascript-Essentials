@@ -28,14 +28,20 @@ let callUmpire = document.getElementById("play-Owzthat");
 function gameStart(){
     let startDialog = document.getElementById("startGame");
     startDialog.showModal();
+   let firstNameInput = document.getElementById("firstName");
+    firstNameInput.addEventListener("input", function(event){
+        if(event.validity.tooShort){
+            event.setCustomValidity("The minimum number of characters for this field is 3")
+        }
+    });
+    
     let submitForm = document.getElementById("dialogue-submit");
     submitForm.addEventListener("click", function (){
         let inputs = document.getElementById("startForm").elements;
         let firstName = inputs["firstName"].value;
         let team = inputs["team"].value;
-        alert(firstName);
-        alert(team);
     });
+    
     let target = generateScore();
     // choose team - difficulty level. pass difficulty level as parameter to generateScore()
     // generateScore()
@@ -52,13 +58,27 @@ function gameStart(){
  * displays message to user
  * sets scoreboard target and runs required
  */
-function generateScore(){
-    let initialScore = 100
-    let randomComponent = Math.floor(Math.random() * 250);
+/*function generateScore(){
+    
+
+    if(submitForm === "New Zealand" || "Australia" || "India"){
+        let initialScore = 275;
+    } else if (submitForm === "England" || "Pakistan" || "South Africa"){
+        initialScore = 225;
+    } else if (submitForm === "West Indies" || "Bangladesh" || "Sri Lanka"){
+        initialScore = 150;
+    } else if (submitForm === "Afghanistan" || "Ireland" || "Zimbabwe"){
+        initialScore = 75;
+    } else {
+        alert("No selected team recognised. Play with default level of easy or select Start new innings");
+        initialScore = 150;
+    }
+    
+    let randomComponent = Math.floor(Math.random() * 100);
     let scoreToBeat = initialScore + randomComponent;
     return scoreToBeat;
 
-}
+}*/
 
 /**
  * playBall function: generates random number and compares random number against batDie array.
