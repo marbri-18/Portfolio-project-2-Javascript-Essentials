@@ -78,17 +78,52 @@ let initialScore;
         initialScore = 275;
         break;
 
+        case "Australia":
+        initialScore = 275;
+        break;
+
+        case "India":
+        initialScore = 275;
+        break;
+
         case "England":
             initialScore = 225;
             break;
 
-        case "West Indies":
+            case "Pakistan":
+            initialScore = 225;
+            break;
+
+            case "South Africa":
+            initialScore = 225;
+            break;
+
+        case "Sri Lanka":
+            initialScore = 150;
+            break;
+
+            case "Bangladesh":
+            initialScore = 150;
+            break;
+
+            case "West Indies":
             initialScore = 150;
             break;
 
         case "Afghanistan":
             initialScore = 75;
             break;
+
+            case "Ireland":
+            initialScore = 75;
+            break;
+
+            case "Zimbabwe":
+            initialScore = 75;
+            break;
+
+            default:
+                initialScore = 150;
     }
     console.log(initialScore);
     console.log(typeof initialScore);
