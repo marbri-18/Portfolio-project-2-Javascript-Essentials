@@ -246,7 +246,7 @@ function incrementRuns(runs){
 
     let targetReached = parseInt(runsRemaining.innerText);
     if(targetReached <= 0){
-        endGame()
+        endGameWin()
     }
 }
 
@@ -270,7 +270,7 @@ function incrementExtras(){
 
     let targetReached = parseInt(runsRemaining.innerText);
     if(targetReached <= 0){
-        endGame()
+        endGameWin()
 }
 }
 
@@ -373,7 +373,8 @@ function wicket(decision){
     dialogueBox.textContent = "You're out!! The umpire's decision is " + decision;
     let wktTally = parseInt(document.getElementById("wickets-count").innerText);
     if(wktTally >= 10){
-        endGame();
+        
+        endGameLose(previousTotal);
     }
     
     }
@@ -383,9 +384,19 @@ function wicket(decision){
 /**
  * endGame function: processes result and displays relevant result message
  */
-function endGame(){
+function endGameWin(){
     alert("Hello from End Game")
+    let winDialogue = document.getElementById("endGameWin");
+    winDialogue.showModal();
 }
+
+    function endGameLose(previousTotal){
+        let lossDialogue = document.getElementById("endGameDefeat");
+        lossDialogue.showModal();
+    }
+
+    
+
 
 function toggle(){
     let batA = document.getElementById("batA");
