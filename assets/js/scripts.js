@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function onOpen() {
 // calls gameStart function
 let startGame = document.getElementById("start-game");
     startGame.addEventListener("click", function(){
-        gameStart();
+        let newInningsDialog = document.getElementById("new-innings-check");
+        newInningsDialog.showModal(); 
     });
 //Event listener - next ball button
 // calls playBall function
@@ -20,21 +21,37 @@ let callUmpire = document.getElementById("play-Owzthat");
         umpire();
     });
 
+    //Event Listener - Confirm Start New Innings dialogue button
+    // call gameStart function
+let restartGame = document.getElementById("new-innings-confirm");
+restartGame.addEventListener("click", function(){
+    gameStart();
+});
 /**
  * gameStart function: Resets scores, scoreboard and scorecard to zero.
  * Calls generate computer score function
  * disable Owzthat button - until Owzthat rolled
  */
 function gameStart(){
+    // display team choices and levels to user
     let startDialog = document.getElementById("startGame");
     startDialog.showModal();
+
+    // validate modal fields
    /* let firstNameInput = document.getElementById("firstName");
     firstNameInput.addEventListener("input", function(event){
         if(firstNameInput === ""){
             firstNameInput.setCustomValidity("The minimum number of characters for this field is 3")
         }
     });  */
-    
+
+      // set back scoreboard values to 0
+      resetScoreboard();
+       
+      
+    //disable Owzthat button
+    document.getElementById("play-Owzthat").disabled = true;
+    // generate score
     let submitForm = document.getElementById("dialogue-submit");
     submitForm.addEventListener("click", function(){
         let inputs = document.getElementById("startForm").elements;
@@ -43,11 +60,8 @@ function gameStart(){
         generateScore(team, firstName);
             });
 
-    
-    
-    // choose team - difficulty level. pass difficulty level as parameter to generateScore()
-    // generateScore()
-    //disable Owzthat button
+       
+
     
 }
 
@@ -57,21 +71,7 @@ function gameStart(){
  * sets scoreboard target and runs required
  */
 function generateScore(teamSelected, firstName){
-    console.log(teamSelected);
-    
-
-   /* if(teamSelected === "New Zealand" || "Australia" || "India"){
-        initialScore = 275;
-    } else if (teamSelected === "England" || "Pakistan" || "South Africa"){
-        initialScore = 225;
-    } else if (teamSelected === "West Indies" || "Bangladesh" || "Sri Lanka"){
-        initialScore = 150;
-    } else if (teamSelected === "Afghanistan" || "Ireland" || "Zimbabwe"){
-        initialScore = 75;
-    } else {
-        alert("No selected team recognised. Play with default level of easy or select Start new innings");
-        initialScore = 150;
-    }*/
+   
 let initialScore;
     switch (teamSelected){
         case "New Zealand":
@@ -125,8 +125,7 @@ let initialScore;
             default:
                 initialScore = 150;
     }
-    console.log(initialScore);
-    console.log(typeof initialScore);
+   
     
     let randomComponent = Math.floor(Math.random() * 100);
     console.log(randomComponent);
@@ -216,7 +215,9 @@ function playBall(){
     
         case "Owzthat":
             dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Roll the umpire die to learn your fate";
-            // enable Owzthat button
+            document.getElementById("play-Owzthat").disabled = false;
+            document.getElementById("play-ball").disabled = true;
+            // disable next ball button
         break;    
     }
 }
@@ -302,7 +303,8 @@ else if (appeal >= 7){
 } else {
     alert("No decision - try again");
 }
-
+document.getElementById("play-Owzthat").disabled = true;
+            document.getElementById("play-ball").disabled = false;
 }
 
 /**
@@ -428,5 +430,25 @@ function toggle(){
     batNumB.classList.toggle("non-striker-Num");
 }
 
+
+    
+      /*let batsmanOrderA = document.getElementById("batNumA");
+      batsmanOrderA.innerText = "0";
+      let batsmanOrderB = document.getElementById("batNumB");
+      batsmanOrderB.innerText = "0";
+      let batsmanScoreA = document.getElementById("batA");
+      batsmanScoreA.innerText = "0";
+      let batsmanScoreB = */
+
+      function resetScoreboard(){
+        let batsmanNumA = document.getElementById("batNumA");
+        batsmanNumA.innerText = "1";
+        let batsmanNumB = document.getElementById("batNumB");
+        batsmanNumB.innerText = "2";
+        let scoreBoxes = document.getElementsByClassName("score-box");      
+        for (let i = 0; i < scoreBoxes.length; i++){
+            scoreBoxes[i].innerText = "0";
+        }
+      }
 /* DIALOGUE BOX */
 

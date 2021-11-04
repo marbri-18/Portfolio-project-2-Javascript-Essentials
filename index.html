@@ -16,9 +16,9 @@
         <section class="container" id="scoreboard-area">
           <div class="row" id="current-batsmen">
             <div class="col-lg-3 batsman-label"><p>Batsman:</p></div>
-            <div class="col-lg-3 batsman-order"><span class="score-box on-strike-Num" id="batNumA">1</span></div>
+            <div class="col-lg-3 batsman-order"><span class="batsman-box on-strike-Num" id="batNumA">1</span></div>
             <div class="col-lg-3 batsman-label"><p>Batsman:</p></div>
-            <div class="col-lg-3 batsman-order"><span class="score-box non-striker-Num" id=batNumB>2</span></div>
+            <div class="col-lg-3 batsman-order"><span class="batsman-box non-striker-Num" id=batNumB>2</span></div>
           </div>
 
           <div class="row" id="batsmen-score">
@@ -135,6 +135,10 @@
       <p id="winMargin">Win by number of wickets</p>
     </div>
     </div>
+    <div class="row">
+      <div class="col-lg-6"><button class="btn btn-lg btn-primary" id="winPlayAgain">Play Again</button></div>
+      <div class="col-lg-6"><button class="btn btn-lg btn-danger" id="winDismiss">Dismiss</button></div>
+    </div>
     </div>
     </dialog>
 
@@ -149,7 +153,27 @@
       <p id="defeat-margin">Win by number of runs</p>
     </div>
     </div>
+    <div class="row">
+      <div class="col-lg-6"><button class="btn btn-lg btn-primary" id="losePlayAgain">Play Again</button></div>
+      <div class="col-lg-6"><button class="btn btn-lg btn-danger" id="loseDismiss">Dismiss</button></div>
+    </div>  
     </div>
+    </dialog>
+
+    <dialog id="new-innings-check">
+      <h1>Start new innings?</h1>
+      <h5>You have selected "start new innings!"</h5>
+      <p>This will reset your scores and start a new game. Your scores will not be saved.</p>
+      <p>Are you sure you want to continue?</p>
+      <form action="" method="dialog" id="confirm-new-innings">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6"><button id="new-innings-confirm" value="default">Confirm</button></div>
+            <div class="col-lg-6"><button value="cancel">Cancel</button></div>
+          </div>
+        </div>
+
+      </form>
     </dialog>
 
     
