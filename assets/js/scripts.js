@@ -28,19 +28,19 @@ let callUmpire = document.getElementById("play-Owzthat");
 function gameStart(){
     let startDialog = document.getElementById("startGame");
     startDialog.showModal();
-  /* let firstNameInput = document.getElementById("firstName");
+   /* let firstNameInput = document.getElementById("firstName");
     firstNameInput.addEventListener("input", function(event){
-        if(event.validity.tooShort){
-            event.setCustomValidity("The minimum number of characters for this field is 3")
+        if(firstNameInput === ""){
+            firstNameInput.setCustomValidity("The minimum number of characters for this field is 3")
         }
-    }); */
+    });  */
     
     let submitForm = document.getElementById("dialogue-submit");
     submitForm.addEventListener("click", function(){
         let inputs = document.getElementById("startForm").elements;
         let firstName = inputs["firstName"].value;
         let team = inputs["team"].value;
-        generateScore(team);
+        generateScore(team, firstName);
             });
 
     
@@ -56,7 +56,7 @@ function gameStart(){
  * displays message to user
  * sets scoreboard target and runs required
  */
-function generateScore(teamSelected){
+function generateScore(teamSelected, firstName){
     console.log(teamSelected);
     
 
@@ -133,7 +133,7 @@ let initialScore;
     let target = initialScore + randomComponent;
     
     let dialogueBox = document.getElementById("dialogue-box");
-    let msg = "Welcome to Lords on a glorious sunny day. The opposition have batted first and scored " + target + ". Can you beat this target? Click on next ball to start your innings";
+    let msg = "Welcome " + firstName + " to Lords on a glorious sunny day. You have chosen " + teamSelected + " as the opposition. " + teamSelected + " have batted first and scored " + target + ". Can you beat this target? Click on next ball to start your innings";
     dialogueBox.textContent = msg;
     let scoreboardTarget = document.getElementById("score-to-beat");
     scoreboardTarget.innerText = target;
