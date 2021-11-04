@@ -113,9 +113,26 @@ dialog {
     border: 2px double #000;
 }
 
-dialog h1 {
+dialog h2 {
     
-    font-size: 0.75rem;
+    background-color: navy;
+    color:#fff;
+    text-align:center;
+    margin-bottom: 50px;
+}
+
+dialog h3 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+dialog p {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.button-div {
+    text-align: center;
 }
 
 .dialogue-icon {
