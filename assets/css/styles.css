@@ -21,7 +21,7 @@ h1 {
 
 nav {
     text-align: right;
-    margin-right: 150px;
+    margin-right: 40%;
     padding: 20px 0;
 }
 
@@ -82,6 +82,10 @@ nav > a:hover {
 
 .last-batsman {
     text-align:center;
+}
+
+.runs-remaining {
+    text-align: center;
 }
 
 .extras {

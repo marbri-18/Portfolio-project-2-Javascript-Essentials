@@ -311,18 +311,20 @@ function umpire(){
     let decision = umpire[appeal];
     let dialogueBox = document.getElementById("dialogue-box");
     dialogueBox.textContent ="Umpire's decision pending";
+setTimeout(function(){
+    if (appeal <= 3){
+        extras(decision);
+    } else if (appeal > 3 && appeal < 7){
+        
+        dialogueBox.textContent = "The umpires decision is Not Out. Select Next Ball to continue playing";
+    }
+    else if (appeal >= 7){
+        wicket(decision);
+    } else {
+        alert("No decision - try again");
+    }
+}, 2000);
 
-if (appeal <= 3){
-    extras(decision);
-} else if (appeal > 3 && appeal < 7){
-    // setTimeout here
-    dialogueBox.textContent = "The umpires decision is Not Out. Select Next Ball to continue playing";
-}
-else if (appeal >= 7){
-    wicket(decision);
-} else {
-    alert("No decision - try again");
-}
 document.getElementById("play-Owzthat").disabled = true;
             document.getElementById("play-ball").disabled = false;
 }
