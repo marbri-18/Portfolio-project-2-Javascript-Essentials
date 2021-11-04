@@ -93,14 +93,19 @@ nav > a:hover {
     border: 1px black solid;
     border-radius: 10px;
     width: 75%;
-    margin: 25px auto;
-    
+    margin: 25px auto;    
+}
+
+#dialogue-box {
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 .button {
     text-align: center;
     margin-bottom: 25px;
-    
+
 }
 
 dialog {
@@ -109,7 +114,12 @@ dialog {
 }
 
 dialog h1 {
-    width: 90%;
+    
+    font-size: 0.75rem;
+}
+
+.dialogue-icon {
+    width: 70%;
 }
 
 dialog::backdrop {
