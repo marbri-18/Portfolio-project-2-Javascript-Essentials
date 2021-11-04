@@ -27,6 +27,21 @@ let restartGame = document.getElementById("new-innings-confirm");
 restartGame.addEventListener("click", function(){
     gameStart();
 });
+
+// Eventlistener endGame loss dialogue - play again button
+// call gameStart function
+let newGameLoss = document.getElementById("lose-play-again");
+newGameLoss.addEventListener("click", function(){
+    gameStart();
+});
+
+// Eventlistener endGame loss dialogue - play again button
+// call gameStart function
+let newGameWin = document.getElementById("win-play-again");
+newGameWin.addEventListener("click", function(){
+    gameStart();
+});
+
 /**
  * gameStart function: Resets scores, scoreboard and scorecard to zero.
  * Calls generate computer score function
