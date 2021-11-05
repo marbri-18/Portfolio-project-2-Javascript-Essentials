@@ -60,19 +60,19 @@
     </div>
 
     <dialog id="startGame">
-      <h1 id="welcome">
+      <h2 id="welcome">
         Welcome to OWZthat
-      </h1>
+      </h2>
       <h3>Enter your name and choose your opponents below to start playing.</h3>
       <form action="" method="dialog" id="startForm">
         <label for="firstName">Enter your first Name: </label>
-        <input type="text" id="firstName" name="firstName" minlength="3" required>
-        <p>field required - 3 characters minimum</p>
+        <input type="text" id="firstName" name="firstName" required>
+        <span id="field-required">field required</span>
         <fieldset>
           <legend>Choose your opponents</legend>
           <div class="container">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-6 level beginner">
                 <p>Beginner level:</p>
                 <label for="ireland" class="beginner"> <img src="assets/images/ireland_logo.png" alt="Ireland test team logo"> Ireland </label>
                   <input type="radio" name="team" value="Ireland" id="ireland" required>
@@ -82,7 +82,7 @@
                   <input type="radio" name="team" value="Afghanistan" id="afghanistan" required>
               
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 level easy">
                 <p>Easy level:</p>
                 <label for="westIndies" class="easy"> <img src="assets/images/westindies_logo.png" alt="West Indies test team logo"> West Indies </label>
                 <input type="radio" name="team" value="West Indies" id="westIndies" required>
@@ -95,7 +95,7 @@
               
             </div>
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-6 level moderate">
                 <p>Moderate level:</p>
                 <label for="southAfrica" class="moderate"> <img src="assets/images/southAfrica_logo.png" alt="South Africa test team logo"> South Africa </label>
                 <input type="radio" name="team" value="South Africa" id="southAfrica" required>
@@ -104,7 +104,7 @@
                 <label for="england" class="moderate"> <img src="assets/images/england_logo.png" alt="England test team logo"> England </label>
                 <input type="radio" name="team" value="England" id="england" required>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 level difficult">
                 <p>Difficult level:</p>
                 <label for="india" class="Hard"> <img src="assets/images/india_logo.png" alt="India test team logo"> India </label>
                 <input type="radio" name="team" value="India" id="india" required>
@@ -117,8 +117,10 @@
             </div>
           </div>
         </fieldset>
-        <button type="submit" class="btn btn-lg btn-primary" id="dialogue-submit">Start Game</button>
-
+        <div class="dialogue-button-div">
+          <button type="submit" class="btn btn-lg btn-primary" id="dialogue-submit">Start Game</button>
+        </div>
+        
       </form>      
     </dialog>
 

@@ -113,8 +113,41 @@ nav > a:hover {
 }
 
 dialog {
-    background-color: #ddd;
+    background-color: #eee;
     border: 2px double #000;
+    width: 90%;
+}
+
+dialog label {
+    font-size: 1.2rem;
+}
+
+#firstName{
+    width: 260px;
+    margin-right: 25px;
+}
+
+#field-required {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    color: red;
+}
+
+.level {
+    border: 1px double red;
+    border-radius: 10px;
+    /*margin: 1px;*/
+    text-align: center;
+}
+
+.level input {
+    margin-right: 20px;
+}
+
+.dialogue-button-div {
+    text-align: center;
+    padding: 20px;
 }
 
 dialog h2 {
@@ -135,8 +168,13 @@ dialog p {
     font-size: 1.6rem;
 }
 
+.dialog-button-div {
+    padding: 50px 0;
+}
+
 .button-div {
     text-align: center;
+    
 }
 
 .dialogue-icon {
