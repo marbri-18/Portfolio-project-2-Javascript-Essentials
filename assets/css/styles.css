@@ -9,6 +9,8 @@ body {
     padding-top: 10px;
 }
 
+
+
 h1 {
     width: 50%;
     margin: 0 auto;
@@ -52,14 +54,24 @@ nav > a:hover {
     color: #fff;
     letter-spacing: .2rem;
     font-size:2rem;
-    padding: 20px;
+    padding: 10px;
 }
 
 .row {
     padding: 5px 0;
 }
 
+.batsman-label {
+    text-align: right;
+}
 
+.batsman-box {
+    text-align: left;
+}
+
+.bat-score-box {
+    text-align: left;
+}
 
 .score-box {
     border: 2px #444 solid;
@@ -217,8 +229,60 @@ input:invalid {
     padding: 5px;
 }
 
+nav {
+    padding: 3px;
+}
+
+nav a {
+    padding: 2px;
+}
+
+#game-area {
+    width: 100%;
+    margin: 5px auto;
+}
+
+#scoreboard-area {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+}
+
     .batsman-label {
         font-size: 0.8rem;
+        text-align: right;
+        vertical-align: top;
+        padding: 0;
+        
+    }
+
+    .batsman{
+        text-align: left;
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
+    }
+
+    .batsman-box {
+        font-size: 0.8rem;
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
+    }
+
+    .batsman-score {
+        text-align: left;
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .score-box {
+        border: none;
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
     }
 
 .label {
@@ -231,6 +295,19 @@ input:invalid {
 .row {
     text-align: center;
     padding: 0;
+}
+
+#dialogue-box {
+    font-size: .8rem;
+}
+
+.result-message {
+    margin-top: 5px auto;
+}
+
+#dialogue-box {
+    padding: 3px;
+    margin-bottom: 5px;
 }
 
 }

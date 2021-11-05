@@ -14,36 +14,44 @@
       
       <div id="game-area">
         <nav><a href="rules.html">Rules</a> </nav>
-        <section class="container" id="scoreboard-area">
-          <div class="row" id="current-batsmen">
-            <div class="col-lg-3 col-md-6 col-sm-6 batsman-label"><span class="label">Batsman</span>
-              <span class="batsman-box on-strike-Num" id="batNumA">1</span><span>:</span></div>
-              <div class="col-lg-3 col-md-6 col-sm-6"><span class="score-box on-strike" id="batA">0</span></div>
+        <div class="container" id="scoreboard-area">
+
+          <section class="container batting">
+            <div class="row" id="current-batsmen">
+              <div class="col-md-4 batsman-label"><span class="label bat-label">Batsman</span></div>
+              <div class="col-md-4 batsman"><span class="batsman-box on-strike-Num" id="batNumA">1</span></div>
+              <div class="col-md-4 batsman-score"><span class="bat-score-box score-box on-strike" id="batA">0</span></div>          
+</div>
+              <div class="row">
+                <div class="col-md-4 batsman-label"><span class="label bat-label">Batsman</span></div>
+                <div class="col-md-4 batsman"><span class="batsman-box non-striker-Num" id=batNumB>2</span></div>
+                <div class="col-md-4 col-md-3 batsman-score"><span class="bat-score-box score-box non-striker" id="batB">0</span></div>
             
-            
-            <div class="col-lg-3 col-md-6 col-sm-6 batsman-label"><span class="label">Batsman</span>
-            <span class="batsman-box non-striker-Num" id=batNumB>2</span><span>:</span></div>
-            <div class="col-lg-3 col-md-6 col-sm-6"><span class="score-box non-striker" id="batB">0</span></div>
           </div>
+          </section>
+<section class="container innings">
+  <div class="row" >
+    <div class="col-lg-12 innings-total"><p class="label">Total: <span class="score-box" id="innings-total-score">0</span></p></div>
+  </div>
 
-          <div class="row" >
-            <div class="col-lg-12 innings-total"><p class="label">Total: <span class="score-box" id="innings-total-score">0</span></p></div>
-          </div>
+ <div class="row">
+  <div class="col-lg-12 wickets"><p class="label">For: <span class="score-box" id="wickets-count">0</span>Wickets</p></div>
+ </div>
+ 
+ <div class="row" >
+  <div class="col-lg-6 col-sm-12 last-wicket"><p class="label">Last Wicket: <span class="score-box" id="last-wicket">0</span></div>
+  <div class="col-lg-6 col-sm-12 last-batsman"><p class="label">Last Batsman: <span class="score-box" id="last-bat">0</span></div>
+ </div>
 
-         <div class="row">
-          <div class="col-lg-12 wickets"><p class="label">For: <span class="score-box" id="wickets-count">0</span>Wickets</p></div>
-         </div>
-         
-         <div class="row" >
-          <div class="col-lg-6 col-sm-12 last-wicket"><p class="label">Last Wicket: <span class="score-box" id="last-wicket">0</span></div>
-          <div class="col-lg-6 col-sm-12 last-batsman"><p class="label">Last Batsman: <span class="score-box" id="last-bat">0</span></div>
-         </div>
+ <div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-12 target"><p class="label">Target: <span class="score-box" id="score-to-beat">0</span></div>
+    <div class="col-lg-6 col-sm-12 runs-remaining"><p class="label">Runs remaining: <span id="runs-to-get" class="score-box">0</span></p></div>
+    <div class="col-lg-3 col-md-12 extras"><p class="label">Extras: <span id="extras" class="score-box">0</span></p></div>
+  </div>
+</section>
+        </div>  
 
-         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12 target"><p class="label">Target: <span class="score-box" id="score-to-beat">0</span></div>
-            <div class="col-lg-6 col-sm-12 runs-remaining"><p class="label">Runs remaining: <span id="runs-to-get" class="score-box">0</span></p></div>
-            <div class="col-lg-3 col-md-12 extras"><p class="label">Extras: <span id="extras" class="score-box">0</span></p></div>
-          </div>
+          
 
         </section>
         <section id="dialogue-area">
@@ -51,11 +59,11 @@
         </section>
         <section class="container" id="button-area">
           <div class="row buttons">
-            <div class="col-lg-4 button"><button class="btn btn-lg btn-primary" id="start-game">Start new innings</button></div>
-            <div class="col-lg-4 button"><button class="btn btn-lg btn-info" id="play-ball">Next ball</button></div>
-            <div class="col-lg-4 button"><button class="btn btn-lg btn-danger" id="play-Owzthat">OWZthat</button></div>
+            <div class="col-lg-4 col-sm-4 button"><button class="btn btn-lg btn-primary" id="start-game">Start new innings</button></div>
+            <div class="col-lg-4 col-sm-4 button"><button class="btn btn-lg btn-info" id="play-ball">Next ball</button></div>
+            <div class="col-lg-4 col-sm-4 button"><button class="btn btn-lg btn-danger" id="play-Owzthat">OWZthat</button></div>
           </div>
-        </section>
+        
       </div>
     </div>
 
