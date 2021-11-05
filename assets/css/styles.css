@@ -30,8 +30,7 @@ h1 {
 
 .container {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    text-align: center;
 
 }
 
@@ -73,7 +72,7 @@ nav > a:hover {
 }
 
 .batsman-box {
-    text-align: left;
+    margin-right: 40px;
 }
 
 
@@ -92,7 +91,11 @@ nav > a:hover {
 
 .wickets {
     text-align:center;
-}    
+}
+
+#wickets-count {
+    margin-right: 15px;
+}
 
 .last-wicket {
     text-align:center;
@@ -210,7 +213,7 @@ input:invalid {
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px){
-    .batsman-label {
+.batsman-label {
         font-size: 1.7rem;
     }
 }
@@ -230,38 +233,17 @@ nav a {
 }
 
 
-    .batsman-label {
+.batsman-label {
         font-size: 0.8rem;
-       
-        padding: 0;
-        
     }
 
-    .batsman{
-     
-        padding: 0;
-        margin: 0;
-    }
-
-    .batsman-box {
+.batsman-box {
         font-size: 0.8rem;
-     
-        padding: 0;
-        margin: 0;
+     margin-right: 25px;
     }
 
-    .batsman-score {
-   
-        padding: 0;
-        margin: 0;
-        
-    }
-
-    .score-box {
+.score-box {
         border: none;
-     
-        padding: 0;
-        margin: 0;
     }
 
 .label {
@@ -276,17 +258,57 @@ nav a {
     padding: 0;
 }
 
+.level p {
+    font-size: 1rem;
+}
+
+.level label {
+    font-size: .8rem;
+}
+
+.level input {
+    margin: 10px;
+}
+
+.level label > img {
+    width: 36px;
+    height: 36px;
+}
+
 #dialogue-box {
     font-size: .8rem;
+    padding: 3px;
+    margin-bottom: 5px;
 }
 
 .result-message {
     margin-top: 5px auto;
 }
 
-#dialogue-box {
-    padding: 3px;
-    margin-bottom: 5px;
+#welcome {
+    font-size: 1.4rem;
 }
+
+#startGame h3 {
+font-size: 1.2rem;
+}
+
+#firstName {
+    width: 180px;
+}
+
+#firstNameLabel {
+    font-size: 1rem;
+}
+
+#field-required {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#opponents {
+    font-size: 1.2rem;
+}
+
 
 }

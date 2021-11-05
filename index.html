@@ -19,7 +19,7 @@
           <section class="container batting">
             <div class="row" id="current-batsmen">
               <div class="col-md-6 col-sm-12 batsman"><span class="label bat-label">Batsman </span><span class="batsman-box on-strike-Num" id="batNumA">1</span><span class="bat-score-box score-box on-strike" id="batA">0</span></div>
-              <div class="col-md-6 col-sm-12 batsman"><span class="label bat-label">Batsman</span><span class="batsman-box non-striker-Num" id=batNumB>2</span><span class="bat-score-box score-box non-striker" id="batB">0</span></div>
+              <div class="col-md-6 col-sm-12 batsman"><span class="label bat-label">Batsman </span><span class="batsman-box non-striker-Num" id=batNumB>2</span><span class="bat-score-box score-box non-striker" id="batB">0</span></div>
           </div>
           </section>
 
@@ -67,11 +67,11 @@
       </h2>
       <h3>Enter your name and choose your opponents below to start playing.</h3>
       <form action="" method="dialog" id="startForm">
-        <label for="firstName">Enter your first Name: </label>
+        <label for="firstName" id="firstNameLabel">Enter your first Name*: </label>
         <input type="text" id="firstName" name="firstName" required>
-        <span id="field-required">field required</span>
+        <p id="field-required">* = field required</p>
         <fieldset>
-          <legend>Choose your opponents</legend>
+          <legend id="opponents">Choose your opponents</legend>
           <div class="container">
             <div class="row">
               <div class="col-lg-6 level beginner">
