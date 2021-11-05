@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-    width: 30%;
+    width: 50%;
     margin: 0 auto;
     background: navy;
     color: #fff;
@@ -22,7 +22,7 @@ h1 {
 
 
 #game-area {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -47,6 +47,7 @@ nav > a:hover {
 /* Game Play page styles */
 
 #scoreboard-area {
+    width: 90%;
     background-color: #000;
     color: #fff;
     letter-spacing: .2rem;
@@ -54,14 +55,20 @@ nav > a:hover {
     padding: 20px;
 }
 
+.row {
+    padding: 5px 0;
+}
+
+
+
 .score-box {
     border: 2px #444 solid;
     background-color: #222;
     padding: 5px;
-    margin-left: 20px;
+    margin: 0 20px 10px 0;
     text-align: right;
 }
-
+/*
 .batsman-label {
     text-align: right;
 }
@@ -73,7 +80,7 @@ nav > a:hover {
 .batsman-score > span {
     position: relative;
     left: 45px;
-}
+} */
 
 .innings-total {
     text-align: center;
@@ -194,4 +201,36 @@ dialog::backdrop {
 
 input:invalid {
     border: red 2px solid;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px){
+    .batsman-label {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 992px){
+#heading {
+    font-size: 1.8rem;
+    padding: 5px;
+}
+
+    .batsman-label {
+        font-size: 0.8rem;
+    }
+
+.label {
+    font-size: 1rem;
+}
+.score-box {
+    font-size: 1rem;
+}
+
+.row {
+    text-align: center;
+    padding: 0;
+}
+
 }
