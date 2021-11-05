@@ -28,6 +28,13 @@ h1 {
     margin: 0 auto;
 }
 
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
 nav {
     text-align: right;
     margin-right: 0;
@@ -61,17 +68,14 @@ nav > a:hover {
     padding: 5px 0;
 }
 
-.batsman-label {
-    text-align: right;
+.batsman {
+    text-align: center;
 }
 
 .batsman-box {
     text-align: left;
 }
 
-.bat-score-box {
-    text-align: left;
-}
 
 .score-box {
     border: 2px #444 solid;
@@ -80,19 +84,7 @@ nav > a:hover {
     margin: 0 20px 10px 0;
     text-align: right;
 }
-/*
-.batsman-label {
-    text-align: right;
-}
 
-.batsman-score {
-    text-align: center;
-}
-
-.batsman-score > span {
-    position: relative;
-    left: 45px;
-} */
 
 .innings-total {
     text-align: center;
@@ -237,42 +229,29 @@ nav a {
     padding: 2px;
 }
 
-#game-area {
-    width: 100%;
-    margin: 5px auto;
-}
-
-#scoreboard-area {
-    width: 100%;
-    margin: 0;
-    padding: 5px;
-}
 
     .batsman-label {
         font-size: 0.8rem;
-        text-align: right;
-        vertical-align: top;
+       
         padding: 0;
         
     }
 
     .batsman{
-        text-align: left;
-        vertical-align: top;
+     
         padding: 0;
         margin: 0;
     }
 
     .batsman-box {
         font-size: 0.8rem;
-        vertical-align: top;
+     
         padding: 0;
         margin: 0;
     }
 
     .batsman-score {
-        text-align: left;
-        vertical-align: top;
+   
         padding: 0;
         margin: 0;
         
@@ -280,7 +259,7 @@ nav a {
 
     .score-box {
         border: none;
-        vertical-align: top;
+     
         padding: 0;
         margin: 0;
     }
