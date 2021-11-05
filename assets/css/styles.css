@@ -19,9 +19,16 @@ h1 {
     font-size: 3rem;
 }
 
+
+
+#game-area {
+    width: 75%;
+    margin: 0 auto;
+}
+
 nav {
     text-align: right;
-    margin-right: 40%;
+    margin-right: 0;
     padding: 20px 0;
 }
 
