@@ -159,6 +159,12 @@ dialog {
     margin-bottom: 30px;
 }
 
+.awesome {
+    font-size: 2rem;
+    margin-right: 25px;
+    color: red;
+}
+
 
 dialog label {
     font-size: 1.2rem;
