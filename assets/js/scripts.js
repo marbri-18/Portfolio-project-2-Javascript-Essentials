@@ -42,6 +42,21 @@ newGameWin.addEventListener("click", function(){
     gameStart();
 });
 
+// Eventlistener dismiss missing first name dialogue box
+let dismissFirstName = document.getElementById("first-name-modal-close");
+dismissFirstName.addEventListener("click", function(){
+    let firstNameDialogue = document.getElementById("invalid-first-name");
+    firstNameDialogue.style.display='none';
+    location.reload();
+});
+
+let dismissFirstNameFooter = document.getElementById("first-name-modal-footer-btn");
+dismissFirstNameFooter.addEventListener("click", function(){
+    let firstNameDialogue = document.getElementById("invalid-first-name");
+    firstNameDialogue.style.display='none';
+    location.reload();
+});
+
 /**
  * gameStart function: Resets scores, scoreboard and scorecard to zero.
  * Calls generate computer score function
@@ -61,14 +76,14 @@ function gameStart(){
       
     //disable Owzthat button
     document.getElementById("play-Owzthat").disabled = true;
+    
     // generate score
-    let submitForm = document.getElementById("dialogue-submit");
-    submitForm.addEventListener("click", function(){
+    let submitForm = document.getElementById("start-dialogue-submit");
+    submitForm.addEventListener("click", function(event){
+        event.preventDefault();
         let inputs = document.getElementById("startForm").elements;
         let firstName = inputs["firstName"].value;
         let team = inputs["team"].value;
-
-        
         
         if(firstName === ""){
             let invalidFirstName = document.getElementById("invalid-first-name");
@@ -79,7 +94,6 @@ function gameStart(){
         } else {
             generateScore(team, firstName);
         }
-    
 
        
            

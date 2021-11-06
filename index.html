@@ -121,7 +121,7 @@
           </div>
         </fieldset>
         <div class="dialogue-button-div">
-          <button type="submit" class="btn btn-lg btn-primary" id="dialogue-submit">Start Game</button>
+          <button type="submit" class="btn btn-lg btn-primary" id="start-dialogue-submit">Start Game</button>
         </div>
         
       </form>      
@@ -186,12 +186,14 @@
     </dialog>
 
     <dialog id="invalid-first-name">
-      <h3 id="first-name-dialogue-heading"><i class="fa-light fa-triangle-exclamation"></i>Missing first name</h3>
-      <p id="first-name-dialogue-text">Please enter your first name before continuing.</i></p>
-      <form action="" method="dialog" id="dialogue-button">
-        <button type="button" class="btn btn-lg btn-info" value="cancel" aria-label="Close">OK</button>
-      </form>
-      
+      <div class="modal-header">
+        <button type="button" class="close" id="first-name-modal-close">&times;</button>
+        <h4 class="modal-title">Missing first name</h4>
+      </div>
+      <p id="first-name-dialogue-text"><i class="fa-light fa-triangle-exclamation"></i> Please enter your first name before continuing.</i></p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" id="first-name-modal-footer-btn">Close</button>
+      </div>      
     </dialog>
 
     <dialog id="invalid-team">
