@@ -43,7 +43,7 @@ newGameWin.addEventListener("click", function(){
 });
 
 // Eventlistener dismiss missing first name dialogue box
-let dismissFirstName = document.getElementById("first-name-modal-close");
+/* let dismissFirstName = document.getElementById("first-name-modal-close");
 dismissFirstName.addEventListener("click", function(){
     let firstNameDialogue = document.getElementById("invalid-first-name");
     firstNameDialogue.style.display='none';
@@ -55,7 +55,7 @@ dismissFirstNameFooter.addEventListener("click", function(){
     let firstNameDialogue = document.getElementById("invalid-first-name");
     firstNameDialogue.style.display='none';
     location.reload();
-});
+}); */
 
 /**
  * gameStart function: Resets scores, scoreboard and scorecard to zero.
