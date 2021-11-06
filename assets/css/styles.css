@@ -139,12 +139,26 @@ dialog {
     width: 90%;
 }
 
-
-
-.level-container {
-    width: 95%;
-    margin: auto auto;
+.modal-header {
+    background-color: navy;
+    width: 100%;
+    color: white;
+    padding: 0;
+        
 }
+
+.modal-row {
+    width:100%;
+}
+
+.modal-title {
+    text-align: left;
+    padding-left: 10px;
+    background-color: navy;
+    color: white;
+    margin-bottom: 30px;
+}
+
 
 dialog label {
     font-size: 1.2rem;
