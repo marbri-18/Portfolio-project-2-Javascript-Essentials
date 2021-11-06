@@ -53,12 +53,7 @@ function gameStart(){
     startDialog.showModal();
 
     // validate modal fields
-   /* let firstNameInput = document.getElementById("firstName");
-    firstNameInput.addEventListener("input", function(event){
-        if(firstNameInput === ""){
-            firstNameInput.setCustomValidity("The minimum number of characters for this field is 3")
-        }
-    });  */
+  
 
       // set back scoreboard values to 0
       resetScoreboard();
@@ -72,7 +67,26 @@ function gameStart(){
         let inputs = document.getElementById("startForm").elements;
         let firstName = inputs["firstName"].value;
         let team = inputs["team"].value;
-        generateScore(team, firstName);
+
+        
+        
+        if(firstName === ""){
+            let invalidFirstName = document.getElementById("invalid-first-name");
+            invalidFirstName.showModal();
+        } else if (team === ""){
+            let invalidTeam = document.getElementById("invalid-team");
+            invalidTeam.showModal();
+        } else {
+            generateScore(team, firstName);
+        }
+    
+
+       
+           
+        
+        
+        
+        
             });
 
        

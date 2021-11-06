@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OWZthat</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/fb1ad9eb3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
@@ -181,8 +182,22 @@
             <div class="col-lg-6 button-div"><button class = "btn btn-lg btn-info" value="cancel">Cancel</button></div>
           </div>
         </div>
-
       </form>
+    </dialog>
+
+    <dialog id="invalid-first-name">
+      <h3 id="first-name-dialogue-heading"><i class="fa-light fa-triangle-exclamation"></i>Missing first name</h3>
+      <p id="first-name-dialogue-text">Please enter your first name before continuing.</i></p>
+      <form action="" method="dialog" id="dialogue-button">
+        <button type="button" class="btn btn-lg btn-info" value="cancel" aria-label="Close">OK</button>
+      </form>
+      
+    </dialog>
+
+    <dialog id="invalid-team">
+      <h3 id="team-dialogue-heading"><i class="fa-light fa-triangle-exclamation"></i>Missing team selection</h3>
+      <p id="team-dialogue-text"></i>Please select a team to play against before continuing.</p>
+      <button type="button" class="btn btn-lg btn-info" aria-label="Close">OK</button>
     </dialog>
 
     
