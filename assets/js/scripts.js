@@ -25,17 +25,24 @@ let callUmpire = document.getElementById("play-Owzthat");
     });
 
 //Event Listener - Confirm Start New Innings dialogue button
-// call gameStart function
+// refreshes page to start new game
 let newGame = document.getElementById("new-innings-confirm");
 newGame.addEventListener("click", function(){
     location.reload();
 });
 
 // Eventlistener endGame loss dialogue - play again button
-// call gameStart function
+// refreshes page to start new game
 let newGameLoss = document.getElementById("lose-play-again");
 newGameLoss.addEventListener("click", function(){
-    gameStart();
+    location.reload();
+});
+
+// Eventlistener endGame loss dialogue - play again button
+// refreshes page to start new game
+let newGameWin = document.getElementById("win-play-again");
+newGameWin.addEventListener("click", function(){
+    location.reload();
 });
 
  /* gameStart function: 
@@ -50,7 +57,7 @@ function gameStart(){
     let startDialog = document.getElementById("startGame");
     startDialog.showModal();
     resetScoreboard();
-    document.getElementById("play-Owzthat").disabled = true;
+   /* document.getElementById("play-Owzthat").disabled = true; */
     
     let submitForm = document.getElementById("start-dialogue-submit");
     submitForm.addEventListener("click", function(event){
@@ -158,9 +165,9 @@ function playBall(){
     let ball = Math.floor(Math.random() * 11);    
     let runs = batDie[ball];
     let dialogueBox = document.getElementById("dialogue-box");
-    dialogueBox.textContent = "The bowler is running in ... ";
+   /* dialogueBox.textContent = "The bowler is running in ... ";
     setTimeout (function(){dialogueBox.textContent = " ... He delivers the ball";}, 1000);
-    setTimeout(function(){
+    setTimeout(function(){ */
         switch (runs){
             case "0a":
                 dialogueBox.textContent = "Well defended but no runs";
@@ -216,11 +223,11 @@ function playBall(){
         
             case "Owzthat":
                 dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Click on the OWZthat button to learn your fate";
-                document.getElementById("play-Owzthat").disabled = false;
-                document.getElementById("play-ball").disabled = true;
+             /*   document.getElementById("play-Owzthat").disabled = false;
+                document.getElementById("play-ball").disabled = true; */
             break;  
         }
-    }, 2500)
+  /*  }, 2500)*/
 }
 
 /**
@@ -307,8 +314,8 @@ function umpire(){
     }
 }, 2000);
 
-document.getElementById("play-Owzthat").disabled = true;
-            document.getElementById("play-ball").disabled = false;
+/* document.getElementById("play-Owzthat").disabled = true;
+            document.getElementById("play-ball").disabled = false; */
 }
 
 /**
