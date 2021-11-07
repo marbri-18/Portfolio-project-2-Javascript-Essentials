@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function onOpen() {
     gameStart();
 });
+
 // Event listener - game start button
 // calls gameStart function
 let startGame = document.getElementById("start-game");
@@ -8,12 +9,14 @@ let startGame = document.getElementById("start-game");
         let newInningsDialog = document.getElementById("new-innings-check");
         newInningsDialog.showModal(); 
     });
+
 //Event listener - next ball button
 // calls playBall function
 let nextBall = document.getElementById("play-ball");
     nextBall.addEventListener("click", function(){
         playBall();
     });
+
 //Event listener - OWZthat button
 // calls umpire function
 let callUmpire = document.getElementById("play-Owzthat");
@@ -21,8 +24,8 @@ let callUmpire = document.getElementById("play-Owzthat");
         umpire();
     });
 
-    //Event Listener - Confirm Start New Innings dialogue button
-    // call gameStart function
+//Event Listener - Confirm Start New Innings dialogue button
+// call gameStart function
 let restartGame = document.getElementById("new-innings-confirm");
 restartGame.addEventListener("click", function(){
     gameStart();
@@ -35,49 +38,20 @@ newGameLoss.addEventListener("click", function(){
     gameStart();
 });
 
-// Eventlistener endGame loss dialogue - play again button
-// call gameStart function
-let newGameWin = document.getElementById("win-play-again");
-newGameWin.addEventListener("click", function(){
-    gameStart();
-});
-
-// Eventlistener dismiss missing first name dialogue box
-/* let dismissFirstName = document.getElementById("first-name-modal-close");
-dismissFirstName.addEventListener("click", function(){
-    let firstNameDialogue = document.getElementById("invalid-first-name");
-    firstNameDialogue.style.display='none';
-    location.reload();
-});
-
-let dismissFirstNameFooter = document.getElementById("first-name-modal-footer-btn");
-dismissFirstNameFooter.addEventListener("click", function(){
-    let firstNameDialogue = document.getElementById("invalid-first-name");
-    firstNameDialogue.style.display='none';
-    location.reload();
-}); */
-
-/**
- * gameStart function: Resets scores, scoreboard and scorecard to zero.
- * Calls generate computer score function
+ /* gameStart function: 
+ * opens start game dialogue box
+ * calls reset scoreboard function
+ * validates start game form data. if invalid displays message to user if valid...
+ * ... Calls generate computer score function
  * disable Owzthat button - until Owzthat rolled
  */
 function gameStart(){
     // display team choices and levels to user
     let startDialog = document.getElementById("startGame");
     startDialog.showModal();
-
-    // validate modal fields
-  
-
-      // set back scoreboard values to 0
-      resetScoreboard();
-       
-      
-    //disable Owzthat button
+    resetScoreboard();
     document.getElementById("play-Owzthat").disabled = true;
     
-    // generate score
     let submitForm = document.getElementById("start-dialogue-submit");
     submitForm.addEventListener("click", function(event){
         event.preventDefault();
@@ -92,54 +66,43 @@ function gameStart(){
             let invalidTeam = document.getElementById("invalid-team");
             invalidTeam.showModal();
         } else {
-            
             generateScore(team, firstName);
         }
-
-       
-           
-        
-        
-        
-        
-            });
-
-       
-
-    
+    });
 }
 
 /**
- * generateScore function: generates random number for computer score for user to beat.
+ * generateScore function: 
+ * generates random number for computer score for user to beat.
  * displays message to user
  * sets scoreboard target and runs required
  */
 function generateScore(teamSelected, firstName){
     let gameStartDialogue = document.getElementById("startGame");
     gameStartDialogue.style.display='none';  
-let initialScore;
+    let initialScore;
     switch (teamSelected){
         case "New Zealand":
-        initialScore = 275;
-        break;
+            initialScore = 275;
+            break;
 
         case "Australia":
-        initialScore = 275;
-        break;
+            initialScore = 275;
+            break;
 
         case "India":
-        initialScore = 275;
-        break;
+            initialScore = 275;
+            break;
 
         case "England":
             initialScore = 225;
             break;
 
-            case "Pakistan":
+        case "Pakistan":
             initialScore = 225;
             break;
 
-            case "South Africa":
+        case "South Africa":
             initialScore = 225;
             break;
 
@@ -147,11 +110,11 @@ let initialScore;
             initialScore = 150;
             break;
 
-            case "Bangladesh":
+        case "Bangladesh":
             initialScore = 150;
             break;
 
-            case "West Indies":
+        case "West Indies":
             initialScore = 150;
             break;
 
@@ -159,18 +122,17 @@ let initialScore;
             initialScore = 75;
             break;
 
-            case "Ireland":
+        case "Ireland":
             initialScore = 75;
             break;
 
-            case "Zimbabwe":
+        case "Zimbabwe":
             initialScore = 75;
             break;
 
-            default:
-                initialScore = 150;
+        default:
+            initialScore = 150;
     }
-   
     
     let randomComponent = Math.floor(Math.random() * 100);
     console.log(randomComponent);
@@ -181,13 +143,13 @@ let initialScore;
     dialogueBox.textContent = msg;
     let scoreboardTarget = document.getElementById("score-to-beat");
     scoreboardTarget.innerText = target;
-
 }
 
 /**
- * playBall function: generates random number and compares random number against batDie array.
+ * playBall function: 
+ * generates random number and compares random number against batDie array.
  * if runs scored - increments runs of on-strike batsman, updates scoreboards and scorecards and displays a message to user.
- * if runs %2 !0 switches on-strike (class) batsman to non-striker (class) and vice versa.
+ * if runs %2 !0 calls toggle function to switch on-strike batsman.
  * if Owzthat - displays Owzthat message to user.
  * Compares total runs tally against target if runs < target game continues.
  * If runs > target game ends and end game function called.                                                                                                                                                                                                
@@ -196,16 +158,12 @@ function playBall(){
     let batDie = ["0a", "0b", "1a", "1b", "1c", "2a", "2b", 3, 4, 6, "Owzthat"];
     let ball = Math.floor(Math.random() * 11);    
     let runs = batDie[ball];
-    
-    //let batRuns = parseInt(document.getElementsByClassName('on-strike')[0].innerText); 
     let dialogueBox = document.getElementById("dialogue-box");
     dialogueBox.textContent = "The bowler is running in ... ";
     setTimeout (function(){dialogueBox.textContent = " ... He delivers the ball";}, 1000);
-    
     setTimeout(function(){
         switch (runs){
             case "0a":
-                //setTimeOut            
                 dialogueBox.textContent = "Well defended but no runs";
             break;
         
@@ -237,7 +195,6 @@ function playBall(){
             break;
     
             case "2b":
-                
                 dialogueBox.textContent = "guided into the outfield for an easy two runs";
                 incrementRuns(2);
             break;
@@ -262,27 +219,20 @@ function playBall(){
                 dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Click on the OWZthat button to learn your fate";
                 document.getElementById("play-Owzthat").disabled = false;
                 document.getElementById("play-ball").disabled = true;
-                // disable next ball button
             break;  
-         
         }
     }, 2500)
-    
-    
 }
 
 /**
- * incrementRuns function: increments runs for batsmen, extras and totals and decrements Runs remaining on scoreboard and scorecard.
+ * incrementRuns function: 
+ * increments runs for batsmen and totals and decrements Runs remaining on scoreboard and scorecard.
  */
-
 function incrementRuns(runs){
     let batRuns = parseInt(document.getElementsByClassName('on-strike')[0].innerText);
     let batsmanUpdate = document.getElementsByClassName("on-strike")[0];
-     
-
     let incrementRuns = batRuns + runs;
     batsmanUpdate.textContent = incrementRuns;
-
     let totalTargetEl = document.getElementById("innings-total-score");
     let previousTotal = parseInt(document.getElementById("innings-total-score").innerText);
     let incrementTotal;
@@ -301,7 +251,12 @@ function incrementRuns(runs){
     }
 }
 
-
+/**
+ * increments extras score and total after not out decision from umpire.
+ * updates scoreboard and scorecard and displays message to user.
+ * Compares total runs tally against target if runs < target game continues.
+ * If runs > target game ends and end game function called.
+ */
 function incrementExtras(){
     let previousExtras = parseInt(document.getElementById('extras').innerText);
     let extrasUpdate = document.getElementById("extras"); 
@@ -328,24 +283,22 @@ function incrementExtras(){
 }
 
 /**
- * umpire function: generates random number and compares random number with umpire array. 
+ * umpire function: 
+ * generates random number and compares random number with umpire array. 
  * If not out displays message to user to continue.
  * If extras calls extras function. 
  * If wicket calls wicket function.
  */
 function umpire(){
-    
     let umpire = ["leg-bye", "bye", "no ball", "wide", "not out", "not out", "not out", "caught", "bowled", "LBW", "Run Out", "stumped" ];
     let appeal = Math.floor(Math.random() * 12);
-    
     let decision = umpire[appeal];
     let dialogueBox = document.getElementById("dialogue-box");
     dialogueBox.textContent ="Umpire's decision pending";
-setTimeout(function(){
+    setTimeout(function(){
     if (appeal <= 3){
         extras(decision);
     } else if (appeal > 3 && appeal < 7){
-        
         dialogueBox.textContent = "The umpires decision is Not Out. Select Next Ball to continue playing";
     }
     else if (appeal >= 7){
@@ -360,10 +313,9 @@ document.getElementById("play-Owzthat").disabled = true;
 }
 
 /**
- * Extras function increments extras score and total 
- * updates scoreboard and scorecard and displays message to user.
- * Compares total runs tally against target if runs < target game continues.
- * If runs > target game ends and end game function called. 
+ * Extras function 
+ * Processes Owzthat value and displays message to user
+ * calls increment extras function and toggle function if appropriate. 
  */
 function extras(decision){ 
     let dialogueBox = document.getElementById("dialogue-box");
@@ -394,7 +346,8 @@ function extras(decision){
 }
 
 /**
- * wicket function: switches to next batsman. 
+ * wicket function: 
+ * switches to next batsman. 
  * Resets the batsman score to zero and adds on-strike class to new batsman. 
  * Increments the wickets tally. Updates the scoreboard and scorecard. 
  * disable Owzthat button
@@ -416,7 +369,6 @@ function wicket(decision){
     let lastWkt = document.getElementById("last-wicket");
     let lastBatsman = document.getElementById("last-bat");
 
-    //setTimeout here
     dialogueBox.textContent = "You're out!! The umpire's decision is " + decision;
    
     lastBatsman.innerText = batWkt;
@@ -432,19 +384,14 @@ function wicket(decision){
     
     let wktTally = parseInt(document.getElementById("wickets-count").innerText);
     if(wktTally >= 10){
-        
         endGameLose(previousTotal);
     }
-    
-    }
-
-
+}
 
 /**
- * endGame function: processes result and displays relevant result message
+ * endGame (win) function: processes result and displays relevant result message
  */
 function endGameWin(wicketsFallen, target){
-    
     let winDialogue = document.getElementById("endGameWin");
     winDialogue.showModal();
     let winTarget = document.getElementById("winningTarget");
@@ -454,20 +401,24 @@ function endGameWin(wicketsFallen, target){
    fallenWickets.innerText = "You have reached this target and won by " + win + " wickets";
 }
 
-    function endGameLose(previousTotal){
-        let lossDialogue = document.getElementById("endGameDefeat");
-        lossDialogue.showModal();
-        let winningTarget = parseInt(document.getElementById("score-to-beat").innerText);
-        let losingMargin = winningTarget - previousTotal;
-        let dialogueTargetMessage = document.getElementById("target-required");
-        let dialogueMarginMessage = document.getElementById("defeat-margin");
-        dialogueTargetMessage.innerText = "You were set a target of " + winningTarget + " to win";
-        dialogueMarginMessage.innerText = "You scored " + previousTotal + " runs all out. You have lost by " + losingMargin + " runs."; 
-    }
+/**
+ * endGame (loss) function: processes result and displays relevant result message
+ */
+function endGameLose(previousTotal){
+    let lossDialogue = document.getElementById("endGameDefeat");
+    lossDialogue.showModal();
+    let winningTarget = parseInt(document.getElementById("score-to-beat").innerText);
+    let losingMargin = winningTarget - previousTotal;
+    let dialogueTargetMessage = document.getElementById("target-required");
+    let dialogueMarginMessage = document.getElementById("defeat-margin");
+    dialogueTargetMessage.innerText = "You were set a target of " + winningTarget + " to win";
+    dialogueMarginMessage.innerText = "You scored " + previousTotal + " runs all out. You have lost by " + losingMargin + " runs."; 
+}
 
-    
-
-
+/**
+ * Toggle function
+ * switches on-strike batsman when an odd number of runs or extras are scored.
+ */
 function toggle(){
     let batA = document.getElementById("batA");
     let batB = document.getElementById("batB");
@@ -484,25 +435,19 @@ function toggle(){
     batNumB.classList.toggle("non-striker-Num");
 }
 
+/** 
+ * reset scoreboard function
+ * resets scoreboard to initial start game values at start of new game
+ */
+function resetScoreboard(){
+let batsmanNumA = document.getElementById("batNumA");
+batsmanNumA.innerText = "1";
+let batsmanNumB = document.getElementById("batNumB");
+batsmanNumB.innerText = "2";
+let scoreBoxes = document.getElementsByClassName("score-box");      
+for (let i = 0; i < scoreBoxes.length; i++){
+    scoreBoxes[i].innerText = "0";
+}
+}
 
-    
-      /*let batsmanOrderA = document.getElementById("batNumA");
-      batsmanOrderA.innerText = "0";
-      let batsmanOrderB = document.getElementById("batNumB");
-      batsmanOrderB.innerText = "0";
-      let batsmanScoreA = document.getElementById("batA");
-      batsmanScoreA.innerText = "0";
-      let batsmanScoreB = */
-
-      function resetScoreboard(){
-        let batsmanNumA = document.getElementById("batNumA");
-        batsmanNumA.innerText = "1";
-        let batsmanNumB = document.getElementById("batNumB");
-        batsmanNumB.innerText = "2";
-        let scoreBoxes = document.getElementsByClassName("score-box");      
-        for (let i = 0; i < scoreBoxes.length; i++){
-            scoreBoxes[i].innerText = "0";
-        }
-      }
-/* DIALOGUE BOX */
 

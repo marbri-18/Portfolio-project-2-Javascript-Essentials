@@ -10,63 +10,87 @@
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
-    <div class="wrapper">
-      <h1 id="heading">OWZthat</h1>
-      
-      <div id="game-area">
-        <nav><a href="rules.html">Rules</a> </nav>
-        <div class="container" id="scoreboard-area">
-
-          <section class="container batting">
-            <div class="row" id="current-batsmen">
-              <div class="col-md-6 col-sm-12 batsman"><span class="label bat-label">Batsman </span><span class="batsman-box on-strike-Num" id="batNumA">1</span><span class="bat-score-box score-box on-strike" id="batA">0</span></div>
-              <div class="col-md-6 col-sm-12 batsman"><span class="label bat-label">Batsman </span><span class="batsman-box non-striker-Num" id=batNumB>2</span><span class="bat-score-box score-box non-striker" id="batB">0</span></div>
+    <h1 id="heading">OWZthat</h1>      
+    <div id="game-area">
+      <nav><a href="rules.html">Rules</a> </nav>
+      <div class="container" id="scoreboard-area">
+        <!-- Batsmans scores section-->
+        <section class="container batting">
+          <div class="row" id="current-batsmen">
+            <div class="col-md-6 col-sm-12 batsman">
+              <span class="label bat-label">Batsman </span>
+              <span class="batsman-box on-strike-Num" id="batNumA">1</span>
+              <span class="bat-score-box score-box on-strike" id="batA">0</span>
+            </div>
+            <div class="col-md-6 col-sm-12 batsman">
+              <span class="label bat-label">Batsman </span>
+              <span class="batsman-box non-striker-Num" id=batNumB>2</span>
+              <span class="bat-score-box score-box non-striker" id="batB">0</span>
+            </div>
           </div>
-          </section>
-
-<section class="container innings">
-  <div class="row" >
-    <div class="col-lg-12 innings-total"><p class="label">Total: <span class="score-box" id="innings-total-score">0</span></p></div>
-  </div>
-
- <div class="row">
-  <div class="col-lg-12 wickets"><p class="label">For: <span class="score-box" id="wickets-count">0</span>Wickets</p></div>
- </div>
- 
- <div class="row" >
-  <div class="col-lg-6 col-sm-12 last-wicket"><p class="label">Last Wicket: <span class="score-box" id="last-wicket">0</span></div>
-  <div class="col-lg-6 col-sm-12 last-batsman"><p class="label">Last Batsman: <span class="score-box" id="last-bat">0</span></div>
- </div>
-
- <div class="row">
-  <div class="col-lg-3 col-md-6 col-sm-12 target"><p class="label">Target: <span class="score-box" id="score-to-beat">0</span></div>
-    <div class="col-lg-6 col-sm-12 runs-remaining"><p class="label">Runs remaining: <span id="runs-to-get" class="score-box">0</span></p></div>
-    <div class="col-lg-3 col-md-12 extras"><p class="label">Extras: <span id="extras" class="score-box">0</span></p></div>
-  </div>
-</section>
-        </div>  
-
-          
-
         </section>
-        <section id="dialogue-area">
-          <div class="result-message"><p id="dialogue-box">Good shot! You scored 4 runs</p></div>
+        <!-- Innings score details-->
+        <section class="container innings">
+          <div class="row" >
+            <div class="col-lg-12 innings-total">
+              <p class="label">Total: <span class="score-box" id="innings-total-score">0</span></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 wickets">
+              <p class="label">For: <span class="score-box" id="wickets-count">0</span>Wickets</p>
+            </div>
+          </div>
+          <div class="row" >
+            <div class="col-lg-6 col-sm-12 last-wicket">
+              <p class="label">Last Wicket: <span class="score-box" id="last-wicket">0</span>
+            </div>
+            <div class="col-lg-6 col-sm-12 last-batsman">
+              <p class="label">Last Batsman: <span class="score-box" id="last-bat">0</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 target">
+              <p class="label">Target: <span class="score-box" id="score-to-beat">0</span>
+            </div>
+            <div class="col-lg-6 col-sm-12 runs-remaining">
+              <p class="label">Runs remaining: <span id="runs-to-get" class="score-box">0</span></p>
+            </div>
+            <div class="col-lg-3 col-md-12 extras">
+              <p class="label">Extras: <span id="extras" class="score-box">0</span></p>
+            </div>
+          </div>
         </section>
+      </div>  
+        <!-- Dialogue-box section -- Game commentary to user.-->
+        <section id="dialogue-area" class="result-message">
+          <p id="dialogue-box">Good shot! You scored 4 runs</p>
+        </section>
+        <!-- Game buttons section-->
         <section class="container" id="button-area">
           <div class="row buttons">
-            <div class="col-lg-4 col-sm-4 button"><button class="btn btn-lg btn-primary" id="start-game">Start new innings</button></div>
-            <div class="col-lg-4 col-sm-4 button"><button class="btn btn-lg btn-info" id="play-ball">Next ball</button></div>
-            <div class="col-lg-4 col-sm-4 button"><button class="btn btn-lg btn-danger" id="play-Owzthat">OWZthat</button></div>
+            <div class="col-lg-4 col-sm-4 button">
+              <button class="btn btn-lg btn-primary" id="start-game">Start new innings</button>
+            </div>
+            <div class="col-lg-4 col-sm-4 button">
+              <button class="btn btn-lg btn-info" id="play-ball">Next ball</button>
+            </div>
+            <div class="col-lg-4 col-sm-4 button">
+              <button class="btn btn-lg btn-danger" id="play-Owzthat">OWZthat</button>
+            </div>
           </div>
-        
+        </section>
       </div>
     </div>
 
+    <!-- DIALOGUE/ MODAL BOXES -->
+
+    <!-- Game Start dialogue box -->
+    <!-- Automatically opens at start of game-->
     <dialog id="startGame">
-      <h2 id="welcome">
-        Welcome to OWZthat
-      </h2>
+      <h2 id="welcome">Welcome to OWZthat</h2>
       <h3>Enter your name and choose your opponents below to start playing.</h3>
+      
       <form action="" method="dialog" id="startForm">
         <label for="firstName" id="firstNameLabel">Enter your first Name*: </label>
         <input type="text" id="firstName" name="firstName" required>
@@ -89,8 +113,8 @@
                 <label for="bangladesh" class="easy"> <img src="assets/images/bangladesh_logo.png" alt="Bangladesh test team logo"> Bangladesh <input type="radio" name="team" value="Bangladesh" id="bangladesh" required></label>                
                 <label for="sriLanka" class="easy"> <img src="assets/images/srilanka_logo.png" alt="Sri Lanka test team logo"> Sri Lanka <input type="radio" name="team" value="Sri Lanka" id="sriLanka" required></label>
               </div>
-              
             </div>
+            
             <div class="row">
               <div class="col-lg-6 level moderate">
                 <p>Moderate level:</p>
@@ -111,53 +135,59 @@
         <div class="dialogue-button-div">
           <button type="submit" class="btn btn-lg btn-primary" id="start-dialogue-submit">Start Game</button>
         </div>
-        
       </form>      
     </dialog>
 
+    <!-- End Game dialogue box: win-->
+    <!-- automatically opens at end of game when user has won-->
     <dialog id="endGameWin">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6"><img src="assets/images/batsman_icon.png" alt="batsman striking ball" class="dialogue-icon"></div>
           <div class="col-lg-6">
-      <h2>Game Over - You have Won</h2>
-      <h3>Congratulations: A great victory.</h3>
-      <p id="winningTarget">target</p>
-      <p id="winMargin">Win by number of wickets</p>
-    </div>
-    </div>
-    <form action="" method="dialog">
-      <div class="row">
-        <div class="col-lg-6 button-div"><button class="btn btn-lg btn-primary" id="win-play-again">Play Again</button></div>
-        <div class="col-lg-6 button-div"><button class="btn btn-lg btn-danger" id="win-dismiss" value="cancel">Dismiss</button></div>
-      </div>
-    </form>
-    
-    </div>
+            <img src="assets/images/batsman_icon.png" alt="batsman striking ball" class="dialogue-icon">
+          </div>
+          <div class="col-lg-6">
+            <h2>Game Over - You have Won</h2>
+            <h3>Congratulations: A great victory.</h3>
+            <p id="winningTarget">target</p>
+            <p id="winMargin">Win by number of wickets</p>
+          </div>
+        </div>
+      </div> 
+      <form action="" method="dialog">
+        <div class="row">
+          <div class="col-lg-6 button-div"><button class="btn btn-lg btn-primary" id="win-play-again">Play Again</button></div>
+          <div class="col-lg-6 button-div"><button class="btn btn-lg btn-danger" id="win-dismiss" value="cancel">Dismiss</button></div>
+        </div>
+      </form>
     </dialog>
 
+    <!-- End Game dialogue box: loss-->
+    <!-- automatically opens at end of game when user has lost-->
     <dialog id="endGameDefeat">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6"><img src="assets/images/stumps_icon.png" alt="image of cricket stumps" class="dialogue-icon"></div>
           <div class="col-lg-6">
-      <h2>Game Over - You have lost</h2>
-      <h3>Commiserations: A gallant effort but you have fallen short of victory.</h3>
-      <p id="target-required">target</p>
-      <p id="defeat-margin">Win by number of runs</p>
-    </div>
-    </div>
-    <form action="" method="dialog">
-      <div class="row">
-        <div class="col-lg-6 button-div"><button class="btn btn-lg btn-primary" id="lose-play-again">Play Again</button></div>
-        <div class="col-lg-6 button-div"><button class="btn btn-lg btn-danger" id="lose-dismiss" value="cancel">Dismiss</button></div>
+            <img src="assets/images/stumps_icon.png" alt="image of cricket stumps" class="dialogue-icon">
+          </div>
+          <div class="col-lg-6">
+            <h2>Game Over - You have lost</h2>
+            <h3>Commiserations: A gallant effort but you have fallen short of victory.</h3>
+            <p id="target-required">target</p>
+            <p id="defeat-margin">Win by number of runs</p>
+          </div>
+        </div>
       </div>
-    </form>
-    
-
-    </div>
+      <form action="" method="dialog">
+        <div class="row">
+          <div class="col-lg-6 button-div"><button class="btn btn-lg btn-primary" id="lose-play-again">Play Again</button></div>
+          <div class="col-lg-6 button-div"><button class="btn btn-lg btn-danger" id="lose-dismiss" value="cancel">Dismiss</button></div>
+        </div>
+      </form>
     </dialog>
 
+    <!-- New Innings confirm dialogue box -->
+    <!-- Opens when user clicks on "start new innings" button, Asks for confirmation-->
     <dialog id="new-innings-check">
       <h2>Start new innings?</h2>
       <h5>You have selected "start new innings!"</h5>
@@ -173,21 +203,22 @@
       </form>
     </dialog>
 
-
-
+    <!-- Missing first name dialogue box -->
+    <!-- Opens when user submits start game form but has not completed first name field -->
     <dialog id="invalid-first-name" class="modal-lg">
-        <h4 class="modal-title" id="fn-modal-title">Missing first name</h4>
-        <p id="first-name-dialogue-text"><i class="fal fa-exclamation-triangle awesome"></i> Please enter your first name before continuing.</i></p>
+      <h4 class="modal-title" id="fn-modal-title">Missing first name</h4>
+      <p id="first-name-dialogue-text"><i class="fal fa-exclamation-triangle awesome"></i> Please enter your first name before continuing.</i></p>
       <div class="modal-footer">
         <form action="" method="dialog">
           <div class="col-lg-6 button-div">
             <button class = "btn btn-lg btn-info" value="cancel">OK</button>
           </div>
         </form>
-        </div>
-            
+      </div>
     </dialog>
 
+  <!-- Missing team dialogue box -->
+    <!-- Opens when user submits start game form but has not selected any team -->
     <dialog id="invalid-team" class="modal-lg">
       <h4 class="modal-title">Missing team selection</h4>
       <p id="team-dialogue-text"><i class="fal fa-exclamation-triangle awesome"></i> Please select a team to play against before continuing.</p>
@@ -200,7 +231,6 @@
       </div>
     </dialog>
 
-    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>   

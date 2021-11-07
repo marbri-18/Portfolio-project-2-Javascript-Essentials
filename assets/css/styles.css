@@ -1,15 +1,13 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
+    }
 
 body {
     background-image: url("../images/Lords2.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-top: 10px;
-}
-
-
+    }
 
 h1 {
     width: 50%;
@@ -19,40 +17,39 @@ h1 {
     text-align: center;
     padding: 20px;
     font-size: 3rem;
-}
-
-
+    }
 
 #game-area {
     width: 90%;
     margin: 0 auto;
-}
+    }
 
 .container {
     width: 100%;
     text-align: center;
+    }
 
-}
+/* Navigation bar */    
 
 nav {
     text-align: right;
     margin-right: 0;
     padding: 20px 0;
-}
+    }
 
 nav > a {
     background-color: #fff;
     padding: 10px 10px;
     color: #222;
     text-decoration: none;
-}
+    }
 
 nav > a:hover {
     color: #000;
     font-size: 1.1rem;
-}
+    }
 
-/* Game Play page styles */
+/* Scoreboard area */
 
 #scoreboard-area {
     width: 90%;
@@ -61,19 +58,19 @@ nav > a:hover {
     letter-spacing: .2rem;
     font-size:2rem;
     padding: 10px;
-}
+    }
 
 .row {
     padding: 5px 0;
-}
+    }   
 
 .batsman {
     text-align: center;
-}
+    }
 
 .batsman-box {
     margin-right: 40px;
-}
+    }
 
 
 .score-box {
@@ -82,74 +79,73 @@ nav > a:hover {
     padding: 5px;
     margin: 0 20px 10px 0;
     text-align: right;
-}
-
+    }
 
 .innings-total {
     text-align: center;
-}
+    }
 
 .wickets {
     text-align:center;
-}
+    }
 
 #wickets-count {
     margin-right: 15px;
-}
+    }
 
 .last-wicket {
     text-align:center;
-}
+    }
 
 .last-batsman {
     text-align:center;
-}
+    }
 
 .runs-remaining {
     text-align: center;
-}
+    }
 
 .extras {
     text-align: center;
-}
+    }
 
+/* User dialogue/commentary box*/    
 .result-message {
     background-color: #fff;
     border: 1px black solid;
     border-radius: 10px;
     width: 75%;
     margin: 25px auto;    
-}
+    }
 
 #dialogue-box {
     padding: 5px 10px;
     font-size: 1.3rem;
     font-weight: 500;
-}
+    }
 
 .button {
     text-align: center;
     margin-bottom: 25px;
+    }
 
-}
-
+/*  DIALOGUE/ MODAL BOXES */
 dialog {
     background-color: #eee;
     border: 2px double #000;
     width: 90%;
-}
+    }
 
 .modal-header {
     background-color: navy;
     width: 100%;
     color: white;
     padding: 0;
-        
-}
+    }
 
 .modal-row {
     width:100%;
-}
+    }
 
 .modal-title {
     text-align: left;
@@ -157,87 +153,84 @@ dialog {
     background-color: navy;
     color: white;
     margin-bottom: 30px;
-}
+    }
 
 .awesome {
     font-size: 2rem;
     margin-right: 25px;
     color: red;
-}
+    }
 
 
 dialog label {
     font-size: 1.2rem;
-}
+    }
 
 #firstName{
     width: 260px;
     margin-right: 25px;
-}
+    }
 
 #field-required {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: left;
     color: red;
-}
+    }
 
 .level {
     border: 1px double red;
     border-radius: 10px;
-    /*margin: 1px;*/
     text-align: center;
-}
+    }
 
 .level label {
     margin-right: 10px;
-}
+    }
 
 .dialogue-button-div {
     text-align: center;
     padding: 25px;
-}
+    }
 
 dialog h2 {
-    
     background-color: navy;
     color:#fff;
     text-align:center;
     margin-bottom: 50px;
-}
+    }
 
 dialog h3 {
     text-align: center;
     margin-bottom: 25px;
-}
+    }
 
 dialog p {
     text-align: center;
     font-size: 1.6rem;
-}
+    }
 
 
 
 .dialog-button-div {
     padding: 50px 0;
-}
+    }
 
 .button-div {
     text-align: center;
-    
-}
+    }
 
 .dialogue-icon {
     width: 70%;
-}
+    }
 
 dialog::backdrop {
     background: rgba(128, 128, 128, .5);
-}
+    }
 
 input:invalid {
     border: red 2px solid;
-}
+    }
 
 /* MEDIA QUERIES */
 
@@ -251,93 +244,89 @@ input:invalid {
 #heading {
     font-size: 1.8rem;
     padding: 5px;
-}
+    }
 
 nav {
     padding: 3px;
-}
+    }
 
 nav a {
     padding: 2px;
-}
-
+    }
 
 .batsman-label {
-        font-size: 0.8rem;
+    font-size: 0.8rem;
     }
 
 .batsman-box {
-        font-size: 0.8rem;
-     margin-right: 25px;
+    font-size: 0.8rem;
+    margin-right: 25px;
     }
 
 .score-box {
-        border: none;
+    border: none;
+    font-size: 1rem;
     }
 
 .label {
     font-size: 1rem;
-}
-.score-box {
-    font-size: 1rem;
-}
+    }
 
 .row {
     text-align: center;
     padding: 0;
-}
+    }
 
 .level p {
     font-size: 1rem;
-}
+    }
 
 .level label {
     font-size: .8rem;
-}
+    }
 
 .level input {
     margin: 10px;
-}
+    }
 
 .level label > img {
     width: 36px;
     height: 36px;
-}
+    }
 
 #dialogue-box {
     font-size: .8rem;
     padding: 3px;
     margin-bottom: 5px;
-}
+    }
 
 .result-message {
     margin-top: 5px auto;
-}
+    }
 
 #welcome {
     font-size: 1.4rem;
-}
+    }
 
 #startGame h3 {
 font-size: 1.2rem;
-}
+    }
 
 #firstName {
     width: 180px;
-}
+    }
 
 #firstNameLabel {
     font-size: 1rem;
-}
+    }
 
 #field-required {
     font-size: 1rem;
     font-weight: 400;
-}
+    }
 
 #opponents {
     font-size: 1.2rem;
-}
-
+    }
 
 }
