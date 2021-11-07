@@ -330,3 +330,23 @@ font-size: 1.2rem;
     }
 
 }
+
+/* Rules Page*/
+#rules-heading {
+    margin-bottom: 40px;
+}
+
+#rules-nav {
+    background-color: navy;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+#rules-area {
+    width: 80%;
+    background-color: white;
+    opacity: .8;
+    margin: auto auto;
+    padding: 10px;
+    font-size: 1.4rem;
+}
