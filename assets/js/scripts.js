@@ -26,9 +26,9 @@ let callUmpire = document.getElementById("play-Owzthat");
 
 //Event Listener - Confirm Start New Innings dialogue button
 // call gameStart function
-let restartGame = document.getElementById("new-innings-confirm");
-restartGame.addEventListener("click", function(){
-    gameStart();
+let newGame = document.getElementById("new-innings-confirm");
+newGame.addEventListener("click", function(){
+    location.reload();
 });
 
 // Eventlistener endGame loss dialogue - play again button
@@ -135,7 +135,6 @@ function generateScore(teamSelected, firstName){
     }
     
     let randomComponent = Math.floor(Math.random() * 100);
-    console.log(randomComponent);
     let target = initialScore + randomComponent;
     
     let dialogueBox = document.getElementById("dialogue-box");
