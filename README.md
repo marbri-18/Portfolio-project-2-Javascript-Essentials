@@ -52,7 +52,8 @@ Navigation bar screenshot
 #### scoreboard
 The scoreboard is the area that displays all the game data to the player. It includes the target reqired which is static throughout the game. Batsman scores, total scores and extras are incremented as runs and extras are scored. One of the current batsmen, the wickets, last wicket and last batsman scores are updated as a wicket falls. The runs remaining score is decremented as runs and extras are scored.
 
-
+![Scoreboard screenshot](assets/images/scoreboard_screenshot.png)
+Scoreboard screenshot
 
 If in the game the wickets total reaches 10 the game is lost. Otherwise if the total equals the target (and runs remaining reaches 0) the game is won.
 
@@ -62,17 +63,43 @@ Through the scoreboard the player is able to monitor progress against the target
 #### dialogue/commentary area
 The commentary dialogue area, on initial start up, welcomes the player to the game and displays the target for the player to try and beat. Throught the progression of the game the commentary dialogue box provides ball by ball commentary to the player of the outcome of each batsman shot and umpire decision.
 
+![Commentary dialogue box screenshot](assets/images/commentary_dialogue_box_screenshot.png)
+Commentary/Dialogue Box Screenshot
+
 Through the commentary dialogue box the player is informed whether to next click the play ball or OWZthat button.
 
 #### buttons
-There are three buttons in the main game area. 
+There are three buttons in the main game area.
+
+![Gameplay buttons screenshot](assets/images/game_play_buttons_screenshot.png)
+Gameplay buttons screenshot
+
 The "Start new innings" allows the player to abort the current game and start a new innings. When this button is clicked a dialogue box will appear asking the player to confirm this action.
 The "Next Ball" button is clicked to play the next ball. Clicking this button instigates a commentary and finally the outcome of the shot. This may be that runs are or are not scored ot that there is an appeal by the fielding side.
 In the case of an appeal by the fielding side, the player is informed to click the "Owzthat" button. The result of the "Owzthat" button may be that the batsman is out, extras have been scored ot the batsman is not out. the result is displayed to the player in the commentary dialogue box. If a wicket has fallen the method of being out - caught, bowled, LBW etc is displayed to the player. In this instance the scoreboard is updated accordingly. If there are extras, the commentary dialogue area displays the type of extra to the player and the runs are incremented on the scoreboard. In the case of the player being not out or extras being scored the player is informed to continue playing by clicking the "Next ball" button.
 
 While in normal gameplay - i.e. until such time as the "Next ball" outcome is OWZthat - the "OWZthat" button is disabled and greyed out. This prevents the player from instigating the fall of a wicket when there has not been an appeal. Similarly from the time of an "OWZthat" outcome and pending the decision of the appeal the "Next ball" button is disabled. This prevents the player from continuing with a next ball when a OWZthat outcome has occured.
 
+#### End of game win dialogue box
+
+![Win dialogue box screenshot](assets/images/win_dialogue_box_screenshot.png)
+Win dialogue box screenshot
+
+If the computer set score is achieved by the player a congratulations dialogue box opens. This reports the set score and the margin of the win. The player is invited to play again or dismiss the dialogue by selecting one of two buttons.
+
+
+#### End of game lose dialogue box
+
+![lose dialogue box screenshot](assets/images/lose_dialogue_box_screenshot.png)
+Lose dialogue box screenshot
+
+If the player loses all their wickets before reaching the computer set score, a dialogue box commiserating the player is displayed. The box includes the original target and the losing margin. The player is invited to play again or dismiss the dialogue box by selecting one of two buttons.
+
 #### rules
+
+![Rules page screenshot](assets/images/rules_page_screenshot.png)
+Rules page screenshot
+
 The Rules page displays the rule and procedures of the game to the player and are available through a navigation link from the game play page throughout the course of the game. There is also a navigation link on the riule page to return to the gameplay page.
 
 ### features left to implement
