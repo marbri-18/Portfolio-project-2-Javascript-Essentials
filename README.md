@@ -10,7 +10,8 @@ Owzthat demonstrates Javascript in its use of arrays, event listeners random num
 
 
 ### responsiveness screenshot
-![ami responsive mock up image]
+![ami responsive mock up image](amiresponsive_screenshot.png)
+Screenshot of Owzthat displayed on Am I Responsive website.
 
 
 ### features
