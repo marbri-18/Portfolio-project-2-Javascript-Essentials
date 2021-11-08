@@ -210,7 +210,10 @@ dialog p {
     font-size: 1.6rem;
     }
 
-
+.logo {
+    width: 48px;
+    
+}
 
 .dialog-button-div {
     padding: 50px 0;
@@ -289,7 +292,7 @@ nav a {
     margin: 10px;
     }
 
-.level label > img {
+.logo {
     width: 36px;
     height: 36px;
     }
