@@ -16,6 +16,15 @@ Screenshot of Owzthat displayed on Am I Responsive website.
 
 ### features
 
+#### Opening game start dialogue box
+Upon opening Owzthat a game start dialogue box is immediately displayed to the player. The gameplay area is displayed greyed out in the background. This is so the player can enter their name and choose an opponent and difficulty level. 
+
+![Screenshot of opening start game dialogue box displayed to player](assets/images/game_start_dialogue_box.png)
+
+On submitting the dialogue box form, it is validated to ensure the player has entered a name and selected a team to play against. If there is data missing a further dialogue box is displayed to the player informing them the fields must be completed before continuing.
+
+Once the form passes validation and is submitted by the player, a target score is generated and the main game play screen is revealed.
+
 ### existing features
 #### game play page and rules page
 #### heading
