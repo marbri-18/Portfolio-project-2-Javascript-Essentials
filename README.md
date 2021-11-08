@@ -6,7 +6,9 @@ Owzthat was a game I played when I was a child in the 1970's. It was based on th
 
 ![Owzthat image](assets/images/Owzthat_image.png)
 
-Owzthat demonstrates Javascript in its use of arrays, event listeners random number generators, conditional statements, manipulation of the DOM and functions to replicate the gameplay. 
+Owzthat demonstrates Javascript in its use of arrays, event listeners random number generators, conditional statements, manipulation of the DOM and functions to replicate the gameplay.
+
+With the online game not being limited to the outcomes of two six sided dice, I have taken the opportunity to modify some of the scoring and wicket loss frequencies. This has been to more accurately reflect outcomes I consider can realistically be expected from a real game of cricket.
 
 
 ### responsiveness screenshot
@@ -15,6 +17,8 @@ Screenshot of Owzthat displayed on Am I Responsive website.
 
 
 ### features
+
+### existing features
 
 #### Opening game start dialogue box
 Upon opening Owzthat a game start dialogue box is immediately displayed to the player. The gameplay area is displayed greyed out in the background. This is so the player can enter their name and choose an opponent and difficulty level. 
@@ -25,10 +29,26 @@ On submitting the dialogue box form, it is validated to ensure the player has en
 
 Once the form passes validation and is submitted by the player, a target score is generated and the main game play screen is revealed.
 
-### existing features
+
 #### game play page and rules page
+
+There are two pages of the Owzhat website. The first page is the main gameplay area and the second page sets out the rules and procedures of the game to the player.
+
 #### heading
+
+The headings of the gameplay and rules page are displayed using as close to the styling and colours of the original OWZthat game tin as possible. This is to maintain the association with the original game.
+
+![OWZthat website title banner](assets/images/title-bar.png)
+OWZthat website title bar
+
 #### nav
+
+there is a navigation bar with one item which allows the player to navigate to and from the rules page and main gameplay page.
+
+![Navigation bar screenshot](assets/images/navbar_screenshot.png)
+Navigation bar screenshot
+
+
 #### scoreboard
 #### dialogue/commentary area
 #### buttons
