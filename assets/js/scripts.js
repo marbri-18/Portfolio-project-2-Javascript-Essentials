@@ -63,8 +63,8 @@ function gameStart(){
     submitForm.addEventListener("click", function(event){
         event.preventDefault();
         let inputs = document.getElementById("startForm").elements;
-        let firstName = inputs["firstName"].value;
-        let team = inputs["team"].value;
+        let firstName = inputs.firstName.value;
+        let team = inputs.team.value;
         
         if(firstName === ""){
             let invalidFirstName = document.getElementById("invalid-first-name");
@@ -227,7 +227,7 @@ function playBall(){
                 document.getElementById("play-ball").disabled = true; 
             break;  
         }
-        }, 2500)
+        }, 2500);
 }
 
 /**
@@ -253,7 +253,7 @@ function incrementRuns(runs){
     let targetReached = parseInt(runsRemaining.innerText);
     let wicketsFallen = parseInt(document.getElementById("wickets-count").innerText);
     if(targetReached <= 0){
-        endGameWin(wicketsFallen, target)
+        endGameWin(wicketsFallen, target);
     }
 }
 
@@ -401,7 +401,7 @@ function endGameWin(wicketsFallen, target){
     let winDialogue = document.getElementById("endGameWin");
     winDialogue.showModal();
     let winTarget = document.getElementById("winningTarget");
-    winTarget.innerText = "You were set " + target + " runs to win."
+    winTarget.innerText = "You were set " + target + " runs to win.";
     let fallenWickets = document.getElementById("winMargin");
     let win = (10 - wicketsFallen);
    fallenWickets.innerText = "You have reached this target and won by " + win + " wickets";
