@@ -66,6 +66,11 @@ Through the commentary dialogue box the player is informed whether to next click
 
 #### buttons
 There are three buttons in the main game area. 
+The "Start new innings" allows the player to abort the current game and start a new innings. When this button is clicked a dialogue box will appear asking the player to confirm this action.
+The "Next Ball" button is clicked to play the next ball. Clicking this button instigates a commentary and finally the outcome of the shot. This may be that runs are or are not scored ot that there is an appeal by the fielding side.
+In the case of an appeal by the fielding side, the player is informed to click the "Owzthat" button. The result of the "Owzthat" button may be that the batsman is out, extras have been scored ot the batsman is not out. the result is displayed to the player in the commentary dialogue box. If a wicket has fallen the method of being out - caught, bowled, LBW etc is displayed to the player. In this instance the scoreboard is updated accordingly. If there are extras, the commentary dialogue area displays the type of extra to the player and the runs are incremented on the scoreboard. In the case of the player being not out or extras being scored the player is informed to continue playing by clicking the "Next ball" button.
+
+While in normal gameplay - i.e. until such time as the "Next ball" outcome is OWZthat - the "OWZthat" button is disabled and greyed out. This prevents the player from instigating the fall of a wicket when there has not been an appeal. Similarly from the time of an "OWZthat" outcome and pending the decision of the appeal the "Next ball" button is disabled. This prevents the player from continuing with a next ball when a OWZthat outcome has occured.
 
 #### rules
 
