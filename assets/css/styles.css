@@ -215,6 +215,12 @@ dialog p {
     
 }
 
+.radio {
+    
+    width: 15px;
+    height: 15px;
+}
+
 .dialog-button-div {
     padding: 50px 0;
     }
