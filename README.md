@@ -38,7 +38,7 @@ There are two pages of the Owzhat website. The first page is the main gameplay a
 
 The headings of the gameplay and rules page are displayed using as close to the styling and colours of the original OWZthat game tin as possible. This is to maintain the association with the original game.
 
-![OWZthat website title banner](assets/images/title-bar.png)
+![OWZthat website title banner](assets/images/title_bar.png)
 OWZthat website title bar
 
 #### nav
