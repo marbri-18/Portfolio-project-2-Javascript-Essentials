@@ -123,14 +123,25 @@ The lower scores on performance and Best practice appear to be largely related t
 There are no known unresolved bugs but there is an issue with cross browser compatability with Firefox. As I understand it the portfolio assessment does not specify cross browser compatability as a pass criteria. Not has cross browser compatability been covered to date on the course.
 
 ### Deployment
+the Owzthat website has been deployed to GitHub pages
+The steps taken to deploy the site were as follows:
+- From the GitHub repository select "Settings"
+- From the Settings Options menu select pages
+- In the "Pages" page from the source section select "main" as the brach and click "Save"
+
+The live link can be found at: https://marbri-18.github.io/Portfolio-project-2-Javascript-Essentials/
 
 ### Credits
-#### content
-W3Schools
-bootstrap
-font-awesome
-#### media
-shutterstock
-icons
+- CSS styling has used Bootstrap classes. Buttons have all been styled using Bootstrap. The Dialog Box and in particular the Scoreboard layout relies on Bootstrap.
+- End game win and lose icons were dowloaded as a set from ShutterStock which was cropped for single images.
+- Icons on the Start of game dialogue Box validation dialogue boxes are from FontAwesome.
+- I looked up W3Schools for advice on showing and hiding modals/dialogue Boxes, validation of radio buttons, formatting radio buttons, toggling classes.
+- The Lords background image on both game and rules pages is from Shutterstock.
+- International Cricket Board Icons on the Starting dialogue were downloaded from IconApe.
+- The game concept and title styles was based on the game "Owzthat" by Lindop Sports Ltd.
+- Substantial help, guidance and support was provided by my course mentor Samantha Dartnall.
+
+
+
 
 
