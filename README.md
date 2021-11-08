@@ -41,7 +41,7 @@ The headings of the gameplay and rules page are displayed using as close to the 
 ![OWZthat website title banner](assets/images/title_bar.png)
 OWZthat website title bar
 
-#### nav
+#### navigation bar
 
 there is a navigation bar with one item which allows the player to navigate to and from the rules page and main gameplay page.
 
@@ -50,8 +50,23 @@ Navigation bar screenshot
 
 
 #### scoreboard
+The scoreboard is the area that displays all the game data to the player. It includes the target reqired which is static throughout the game. Batsman scores, total scores and extras are incremented as runs and extras are scored. One of the current batsmen, the wickets, last wicket and last batsman scores are updated as a wicket falls. The runs remaining score is decremented as runs and extras are scored.
+
+
+
+If in the game the wickets total reaches 10 the game is lost. Otherwise if the total equals the target (and runs remaining reaches 0) the game is won.
+
+Through the scoreboard the player is able to monitor progress against the target throughout the game.
+
+
 #### dialogue/commentary area
+The commentary dialogue area, on initial start up, welcomes the player to the game and displays the target for the player to try and beat. Throught the progression of the game the commentary dialogue box provides ball by ball commentary to the player of the outcome of each batsman shot and umpire decision.
+
+Through the commentary dialogue box the player is informed whether to next click the play ball or OWZthat button.
+
 #### buttons
+There are three buttons in the main game area. 
+
 #### rules
 
 ### features left to implement
