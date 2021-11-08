@@ -166,7 +166,7 @@ The live link can be found at: https://marbri-18.github.io/Portfolio-project-2-J
 - Icons on the Start of game dialogue Box validation dialogue boxes are from FontAwesome. (https://fontawesome.com/)
 - I looked up W3Schools for advice on showing and hiding modals/dialogue Boxes, validation of radio buttons, formatting radio buttons, toggling classes. (https://www.w3schools.com/)
 - The Lords background image on both game and rules pages is from Shutterstock. (https://www.shutterstock.com/)
-- International Cricket Board Icons on the Starting dialogue were downloaded from IconApe.
+- International Cricket Board Icons on the Starting dialogue were downloaded from IconApe. (https://iconape.com/)
 - The game concept and title styles was based on the game "Owzthat" by Lindop Sports Ltd.
 - Substantial help, guidance and support was provided by my course mentor Samantha Dartnall.
 
