@@ -73,8 +73,18 @@ In the case of an appeal by the fielding side, the player is informed to click t
 While in normal gameplay - i.e. until such time as the "Next ball" outcome is OWZthat - the "OWZthat" button is disabled and greyed out. This prevents the player from instigating the fall of a wicket when there has not been an appeal. Similarly from the time of an "OWZthat" outcome and pending the decision of the appeal the "Next ball" button is disabled. This prevents the player from continuing with a next ball when a OWZthat outcome has occured.
 
 #### rules
+The Rules page displays the rule and procedures of the game to the player and are available through a navigation link from the game play page throughout the course of the game. There is also a navigation link on the riule page to return to the gameplay page.
 
 ### features left to implement
+One of the attractions for me when deciding to embark on this project was the potential for further features that might be implemented. I am hoping it will be possible to return to at least the concept of this project in a future course module and implement many of the enhancements and further features. If not it certainly will be my intention to further develop the game in my own time. Much of the potential for further features to implement would be unlocked through the linking of the game to a back-end database. A list of potential future enhancements include (not an exhaustive list);
+- Option for player v player play;
+- linkages to databases;
+- including player names and data;  
+- Weighting batsmen by position in batting order (or official statistics) using custom dice arrays;
+- Weighting scoring and wicket outcomes according to input high score/risk choice by player
+- Playing a limited balls/overs game
+- Weighting teams scores according to relative standings in cricket rankings
+- Maintaining player highest score rankings (through linkages to database). 
 
 ### Testing
 browsers
