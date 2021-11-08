@@ -140,7 +140,7 @@ The Owzthat website was passed through Lighthouse on Google Chrome and the follo
 - Best Practices 87%
 - SEO 92%
 
-![lighthouse report screenshot](assets/images/Lighthouse.png)
+![lighthouse report screenshot](assets/images/Lighthouse_report.png)
 Lighthouse report screenshot
 
 The lower scores on performance and Best practice appear to be largely related to the use of .png formats rather than emerging AVIF or WebP formats. I chose to retain .png formats in line with the course lecture content and examples.
