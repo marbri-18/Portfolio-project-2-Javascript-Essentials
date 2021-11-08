@@ -87,14 +87,40 @@ One of the attractions for me when deciding to embark on this project was the po
 - Maintaining player highest score rankings (through linkages to database). 
 
 ### Testing
-browsers
-HTML
-CSS
-Javascript
-include metrics
-![lighthouse report screenshot]
+I have ran a number of games on a pre-deployment version of the site and the game appears to run without any apparent bugs. There are no alerts reported in the console.
+I have viewed the site on Desktop, laptop, tablet and smartphone devices and the site appears responsive across all media.
+
+#### browsers
+I have tested OWZthat on Google Chrome, Opera, Microsoft Edge and Firefox. It appears and works as expected on all above browsers except Firefox. On Firebox the gane start dialogue box does not appear and the toggle function to switch batsman at the score of an odd number of runs does not work.
+
+#### HTML
+The Owzthat site has been passed through W3C HTML validator. No errors were reported. There were 9 warnings all related to headers which are not applicable to this site.
+
+### CSS
+The OWZthat site has been passed through the W3C CSS Validation Service (Jigsaw). No error were found.
+
+### Javascript
+Ther OWZthat site was passed through JSHint. No errors were reported. The following metrics were reported
+There are 23 functions in this file.
+Function with the largest signature take 2 arguments, while the median is 0.
+Largest function has 22 statements in it, while the median is 6.
+The most complex function has a cyclomatic complexity value of 13 while the median is 1
+
+### Lighthouse
+The Owzthat website was passed through Lighthouse on Google Chrome and the following results were reported:
+- Performance: 92%
+- Accessibility 97%
+- Best Practices 87%
+- SEO 92%
+
+![lighthouse report screenshot](assets/images/Lighthouse.png)
+Lighthouse report screenshot
+
+The lower scores on performance and Best practice appear to be largely related to the use of .png formats rather than emerging AVIF or WebP formats. I chose to retain .png formats in line with the course lecture content and examples.
 
 ### unfixed bugs
+
+There are no known unresolved bugs but there is an issue with cross browser compatability with Firefox. As I understand it the portfolio assessment does not specify cross browser compatability as a pass criteria. Not has cross browser compatability been covered to date on the course.
 
 ### Deployment
 
