@@ -4,7 +4,8 @@
 ### overview
 Owzthat was a game I played when I was a child in the 1970's. It was based on the game of cricket and involved the rolling of two six sided dice. I thought it would be great if this game could be reproduced as an online version so users could experience the entertainment I had as a child with a few extra features. The user or player plays against the computer, which generates a target score based on one of four levels chosen by input from the player. The player has to beat the target set by the computer. 
 
-![Owzthat image](assets/images/Owzthat_image.png)
+![image of Original OWZthat game](assets/images/Owzthat_image.png)
+image of Original OWZthat game
 
 Owzthat demonstrates Javascript in its use of arrays, event listeners random number generators, conditional statements, manipulation of the DOM and functions to replicate the gameplay.
 
@@ -24,6 +25,7 @@ Screenshot of Owzthat displayed on Am I Responsive website.
 Upon opening Owzthat a game start dialogue box is immediately displayed to the player. The gameplay area is displayed greyed out in the background. This is so the player can enter their name and choose an opponent and difficulty level. 
 
 ![Screenshot of opening start game dialogue box displayed to player](assets/images/game_start_dialogue_box.png)
+Starting options dialogue box screenshot
 
 On submitting the dialogue box form, it is validated to ensure the player has entered a name and selected a team to play against. If there is data missing a further dialogue box is displayed to the player informing them the fields must be completed before continuing.
 
@@ -159,11 +161,11 @@ The steps taken to deploy the site were as follows:
 The live link can be found at: https://marbri-18.github.io/Portfolio-project-2-Javascript-Essentials/
 
 ### Credits
-- CSS styling has used Bootstrap classes. Buttons have all been styled using Bootstrap. The Dialog Box and in particular the Scoreboard layout relies on Bootstrap.
-- End game win and lose icons were dowloaded as a set from ShutterStock which was cropped for single images.
-- Icons on the Start of game dialogue Box validation dialogue boxes are from FontAwesome.
-- I looked up W3Schools for advice on showing and hiding modals/dialogue Boxes, validation of radio buttons, formatting radio buttons, toggling classes.
-- The Lords background image on both game and rules pages is from Shutterstock.
+- CSS styling has used Bootstrap classes. Buttons have all been styled using Bootstrap. The Dialog Box and in particular the Scoreboard layout relies on Bootstrap. (https://getbootstrap.com/)
+- End game win and lose icons were dowloaded as a set from ShutterStock which was cropped for single images. (https://www.shutterstock.com/)
+- Icons on the Start of game dialogue Box validation dialogue boxes are from FontAwesome. (https://fontawesome.com/)
+- I looked up W3Schools for advice on showing and hiding modals/dialogue Boxes, validation of radio buttons, formatting radio buttons, toggling classes. (https://www.w3schools.com/)
+- The Lords background image on both game and rules pages is from Shutterstock. (https://www.shutterstock.com/)
 - International Cricket Board Icons on the Starting dialogue were downloaded from IconApe.
 - The game concept and title styles was based on the game "Owzthat" by Lindop Sports Ltd.
 - Substantial help, guidance and support was provided by my course mentor Samantha Dartnall.
