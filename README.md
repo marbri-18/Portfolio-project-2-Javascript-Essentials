@@ -4,7 +4,7 @@
 ### overview
 Owzthat was a game I played when I was a child in the 1970's. It was based on the game of cricket and involved the rolling of two six sided dice. I thought it would be great if this game could be reproduced as an online version so users could experience the entertainment I had as a child with a few extra features. The user or player plays against the computer, which generates a target score based on one of four levels chosen by input from the player. The player has to beat the target set by the computer. 
 
-![Owzthat image]assets/images/Owzthat_image.png
+![Owzthat image](assets/images/Owzthat_image.png)
 
 Owzthat demonstrates Javascript in its use of arrays, event listeners random number generators, conditional statements, manipulation of the DOM and functions to replicate the gameplay. 
 
