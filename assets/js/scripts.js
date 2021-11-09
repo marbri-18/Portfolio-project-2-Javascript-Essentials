@@ -52,6 +52,13 @@ closeFirstName.addEventListener("click", function(){
             invalidFirstName.style.display="none";
 });
 
+//Event Listener close missing team dialogue - OK button
+let closeTeam = document.getElementById("missing-team-close");
+closeTeam.addEventListener("click", function(){
+    let invalidTeam = document.getElementById("invalid-team");
+            invalidTeam.style.display="none";
+});
+
  /* gameStart function: 
  * opens start game dialogue box
  * calls reset scoreboard function
