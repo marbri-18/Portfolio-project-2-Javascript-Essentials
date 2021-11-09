@@ -145,23 +145,13 @@ nav > a:hover {
     border: 2px double #000;
     }
     
-#invalid-first-name {
+.modal-medium {
     display: none;
     position: fixed;
     z-index: 2;
     padding-top: 15px;
     left: 0;
-    top: 200px;
-    border: 2px double #000;
-    }
-    
-#invalid-team {
-    display: none;
-    position: fixed;
-    z-index: 2;
-    padding-top: 15px;
-    left: 0;
-    top: 200px;
+    top: 200px;    
     border: 2px double #000;
     }
 

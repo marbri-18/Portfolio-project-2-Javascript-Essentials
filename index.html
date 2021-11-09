@@ -143,7 +143,7 @@
 
     <!-- End Game dialogue box: win-->
     <!-- automatically opens at end of game when user has won-->
-    <dialog id="endGameWin">
+    <dialog id="endGameWin" class=modal-medium>
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -167,7 +167,7 @@
 
     <!-- End Game dialogue box: loss-->
     <!-- automatically opens at end of game when user has lost-->
-    <dialog id="endGameDefeat">
+    <dialog id="endGameDefeat" class="modal-medium">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -191,7 +191,7 @@
 
     <!-- New Innings confirm dialogue box -->
     <!-- Opens when user clicks on "start new innings" button, Asks for confirmation-->
-    <dialog id="new-innings-check">
+    <dialog id="new-innings-check" class="modal-medium">
       <h2>Start new innings?</h2>
       <h5>You have selected "start new innings!"</h5>
       <p>This will reset your scores and start a new game. Your scores will not be saved.</p>
@@ -208,7 +208,7 @@
 
     <!-- Missing first name dialogue box -->
     <!-- Opens when user submits start game form but has not completed first name field -->
-    <dialog id="invalid-first-name" class="modal">
+    <dialog id="invalid-first-name" class="modal-medium">
       <h4 class="modal-title" id="fn-modal-title">Missing first name</h4>
       <p id="first-name-dialogue-text"><i class="fal fa-exclamation-triangle awesome"></i> Please enter your first name before continuing.</i></p>
       <div class="modal-footer">
@@ -222,7 +222,7 @@
 
   <!-- Missing team dialogue box -->
     <!-- Opens when user submits start game form but has not selected any team -->
-    <dialog id="invalid-team" class="modal">
+    <dialog id="invalid-team" class="modal-medium">
       <h4 class="modal-title">Missing team selection</h4>
       <p id="team-dialogue-text"><i class="fal fa-exclamation-triangle awesome"></i> Please select a team to play against before continuing.</p>
       <div class="modal-footer">
