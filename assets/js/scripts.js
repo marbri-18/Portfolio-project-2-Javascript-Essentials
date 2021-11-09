@@ -25,7 +25,6 @@ callUmpire.addEventListener("click", function(){
     });
 
 //Event Listener - Confirm Start New Innings dialogue button
-// refreshes page to start new game
 let newGame = document.getElementById("new-innings-confirm");
 newGame.addEventListener("click", function(){
     let closeNewInnModal = document.getElementById("new-innings-check");
@@ -34,7 +33,6 @@ newGame.addEventListener("click", function(){
 });
 
 // Eventlistener endGame loss dialogue - play again button
-// refreshes page to start new game
 let newGameLoss = document.getElementById("lose-play-again");
 newGameLoss.addEventListener("click", function(){
     let closeEndGameLossModal = document.getElementById("end-game-defeat");
@@ -43,7 +41,6 @@ newGameLoss.addEventListener("click", function(){
 });
 
 // Eventlistener endGame loss dialogue - play again button
-// refreshes page to start new game
 let newGameWin = document.getElementById("win-play-again");
 newGameWin.addEventListener("click", function(){
     let closeEndGameWinModal = document.getElementById("end-game-win");
@@ -51,7 +48,19 @@ newGameWin.addEventListener("click", function(){
     gameStart();
 });
 
-//Event Listener close missing firstName dialogue - OK button
+// Eventlistener endGame loss dialogue - dismiss button
+let dismissLoss = document.getElementById("lose-dismiss");
+dismissLoss.addEventListener("click", function(){
+    let closeEndGameLossModal = document.getElementById("end-game-defeat");
+    closeEndGameLossModal.style.display="none";
+
+// Eventlistener endGame win dialogue - dismiss button
+let dismissLoss = document.getElementById("win-dismiss");
+dismissLoss.addEventListener("click", function(){
+    let closeEndGameWinModal = document.getElementById("end-game-win");
+    closeEndGameWinModal.style.display="none";
+
+    //Event Listener close missing firstName dialogue - OK button
 let closeFirstName = document.getElementById("missing-first-name-close");
 closeFirstName.addEventListener("click", function(){
     let invalidFirstName = document.getElementById("invalid-first-name");
