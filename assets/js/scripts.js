@@ -87,7 +87,7 @@ function gameStart(){
             let invalidTeam = document.getElementById("invalid-team");
             invalidTeam.style.display="block";
         } else {
-            let gameStartDialogue = document.getElementById("startGame");
+            let gameStartDialogue = document.getElementById("start-modal");
             gameStartDialogue.style.display='none';
             generateScore(team, firstName);
 
@@ -102,7 +102,6 @@ function gameStart(){
  * sets scoreboard target and runs required
  */
 function generateScore(teamSelected, firstName){
-      
     let initialScore;
     switch (teamSelected){
         case "New Zealand":
