@@ -68,12 +68,15 @@ function gameStart(){
         
         if(firstName === ""){
             let invalidFirstName = document.getElementById("invalid-first-name");
-            invalidFirstName.showModal();
+            invalidFirstName.style.display="block";
         } else if (team === ""){
             let invalidTeam = document.getElementById("invalid-team");
-            invalidTeam.showModal();
+            invalidTeam.style.display="block";
         } else {
+            let gameStartDialogue = document.getElementById("startGame");
+            gameStartDialogue.style.display='none';
             generateScore(team, firstName);
+
         }
     });
 }
@@ -85,8 +88,7 @@ function gameStart(){
  * sets scoreboard target and runs required
  */
 function generateScore(teamSelected, firstName){
-    let gameStartDialogue = document.getElementById("startGame");
-    gameStartDialogue.style.display='none';  
+      
     let initialScore;
     switch (teamSelected){
         case "New Zealand":
