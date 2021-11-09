@@ -54,8 +54,8 @@ newGameWin.addEventListener("click", function(){
  */
 function gameStart(){
     // display team choices and levels to user
-    let startDialog = document.getElementById("startGame");
-    startDialog.showModal();
+    let modal = document.getElementById("start-modal");
+    modal.style.display="block";
     resetScoreboard();
     document.getElementById("play-Owzthat").disabled = true;
     
