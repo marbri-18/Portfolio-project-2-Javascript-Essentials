@@ -120,7 +120,7 @@ I have ran a number of games on a pre-deployment version of the site and the gam
 I have viewed the site on Desktop, laptop, tablet and smartphone devices and the site appears responsive across all media.
 
 #### browsers
-I have tested OWZthat on Google Chrome, Opera, Microsoft Edge and Firefox. It appears and works as expected on all above browsers except Firefox. On Firebox the gane start dialogue box does not appear and the toggle function to switch batsman at the score of an odd number of runs does not work.
+I have tested OWZthat on Google Chrome, Opera, Microsoft Edge and Firefox. The web-site appears to function as it should across all browsers tested.
 
 #### HTML
 The Owzthat site has been passed through W3C HTML validator. No errors were reported. There were 9 warnings all related to headers which are not applicable to this site.
@@ -142,14 +142,14 @@ The Owzthat website was passed through Lighthouse on Google Chrome and the follo
 - Best Practices 87%
 - SEO 92%
 
-![lighthouse report screenshot](assets/images/Lighthouse_report.png)
+![lighthouse report screenshot](assets/images/lighthouse_report.png)
 Lighthouse report screenshot
 
 The lower scores on performance and Best practice appear to be largely related to the use of .png formats rather than emerging AVIF or WebP formats. I chose to retain .png formats in line with the course lecture content and examples.
 
 ### unfixed bugs
 
-There are no known unresolved bugs but there is an issue with cross browser compatability with Firefox. As I understand it the portfolio assessment does not specify cross browser compatability as a pass criteria. Not has cross browser compatability been covered to date on the course.
+There are no known unresolved bugs. 
 
 ### Deployment
 the Owzthat website has been deployed to GitHub pages
