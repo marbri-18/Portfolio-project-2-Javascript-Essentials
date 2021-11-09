@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function onOpen() {
 let startGame = document.getElementById("start-game");
     startGame.addEventListener("click", function(){
         let newInningsDialog = document.getElementById("new-innings-check");
-        newInningsDialog.showModal(); 
+        newInningsDialog.style.display="block"; 
     });
 
 //Event listener - next ball button
@@ -28,7 +28,9 @@ let callUmpire = document.getElementById("play-Owzthat");
 // refreshes page to start new game
 let newGame = document.getElementById("new-innings-confirm");
 newGame.addEventListener("click", function(){
-    location.reload();
+    let closeNewInnModal = document.getElementById("new-innings-check");
+    closeNewInnModal.style.display="none";
+    gameStart();
 });
 
 // Eventlistener endGame loss dialogue - play again button
@@ -427,7 +429,7 @@ function endGameWin(wicketsFallen, target){
  */
 function endGameLose(previousTotal){
     let lossDialogue = document.getElementById("endGameDefeat");
-    lossDialogue.showModal();
+    lossDialogue.style.display="block";
     let winningTarget = parseInt(document.getElementById("score-to-beat").innerText);
     let losingMargin = winningTarget - previousTotal;
     let dialogueTargetMessage = document.getElementById("target-required");
