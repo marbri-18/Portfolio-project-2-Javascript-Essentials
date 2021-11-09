@@ -37,14 +37,18 @@ newGame.addEventListener("click", function(){
 // refreshes page to start new game
 let newGameLoss = document.getElementById("lose-play-again");
 newGameLoss.addEventListener("click", function(){
-    location.reload();
+    let closeEndGameLossModal = document.getElementById("end-game-defeat");
+    closeEndGameLossModal.style.display="none";
+    gameStart();
 });
 
 // Eventlistener endGame loss dialogue - play again button
 // refreshes page to start new game
 let newGameWin = document.getElementById("win-play-again");
 newGameWin.addEventListener("click", function(){
-    location.reload();
+    let closeEndGameWinModal = document.getElementById("end-game-win");
+    closeEndGameWinModal.style.display="none";
+    gameStart();
 });
 
 //Event Listener close missing firstName dialogue - OK button
