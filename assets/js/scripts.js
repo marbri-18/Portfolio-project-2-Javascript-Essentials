@@ -414,7 +414,7 @@ function wicket(decision){
  */
 function endGameWin(wicketsFallen, target){
     let winDialogue = document.getElementById("endGameWin");
-    winDialogue.showModal();
+    winDialogue.style.display="block";
     let winTarget = document.getElementById("winningTarget");
     winTarget.innerText = "You were set " + target + " runs to win.";
     let fallenWickets = document.getElementById("winMargin");
