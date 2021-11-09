@@ -45,6 +45,13 @@ newGameWin.addEventListener("click", function(){
     location.reload();
 });
 
+//Event Listener close missing firstName dialogue - OK button
+let closeFirstName = document.getElementById("missing-first-name-close");
+closeFirstName.addEventListener("click", function(){
+    let invalidFirstName = document.getElementById("invalid-first-name");
+            invalidFirstName.style.display="none";
+});
+
  /* gameStart function: 
  * opens start game dialogue box
  * calls reset scoreboard function
