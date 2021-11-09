@@ -32,6 +32,13 @@ newGame.addEventListener("click", function(){
     gameStart();
 });
 
+//Event listener - dismiss start new innings dialogue button
+let newGameDismiss = document.getElementById("new-innings-dismiss");
+newGameDismiss.addEventListener("click", function(){
+    let closeNewInnModal = document.getElementById("new-innings-check");
+    closeNewInnModal.style.display="none";
+});
+
 // Eventlistener endGame loss dialogue - play again button
 let newGameLoss = document.getElementById("lose-play-again");
 newGameLoss.addEventListener("click", function(){
