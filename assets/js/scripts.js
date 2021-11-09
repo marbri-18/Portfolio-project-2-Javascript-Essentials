@@ -5,23 +5,23 @@ document.addEventListener("DOMContentLoaded", function onOpen() {
 // Event listener - game start button
 // calls gameStart function
 let startGame = document.getElementById("start-game");
-    startGame.addEventListener("click", function(){
-        let newInningsDialog = document.getElementById("new-innings-check");
-        newInningsDialog.style.display="block"; 
+startGame.addEventListener("click", function(){
+    let newInningsDialog = document.getElementById("new-innings-check");
+    newInningsDialog.style.display="block"; 
     });
 
 //Event listener - next ball button
 // calls playBall function
 let nextBall = document.getElementById("play-ball");
-    nextBall.addEventListener("click", function(){
-        playBall();
+nextBall.addEventListener("click", function(){
+    playBall();
     });
 
 //Event listener - OWZthat button
 // calls umpire function
 let callUmpire = document.getElementById("play-Owzthat");
-    callUmpire.addEventListener("click", function(){
-        umpire();
+callUmpire.addEventListener("click", function(){
+    umpire();
     });
 
 //Event Listener - Confirm Start New Innings dialogue button
@@ -55,14 +55,14 @@ newGameWin.addEventListener("click", function(){
 let closeFirstName = document.getElementById("missing-first-name-close");
 closeFirstName.addEventListener("click", function(){
     let invalidFirstName = document.getElementById("invalid-first-name");
-            invalidFirstName.style.display="none";
+    invalidFirstName.style.display="none";
 });
 
 //Event Listener close missing team dialogue - OK button
 let closeTeam = document.getElementById("missing-team-close");
 closeTeam.addEventListener("click", function(){
     let invalidTeam = document.getElementById("invalid-team");
-            invalidTeam.style.display="none";
+    invalidTeam.style.display="none";
 });
 
  /* gameStart function: 
@@ -77,7 +77,7 @@ function gameStart(){
     let modal = document.getElementById("start-modal");
     modal.style.display="block";
     resetScoreboard();
-    document.getElementById("play-Owzthat").disabled = true;
+    //document.getElementById("play-Owzthat").disabled = true;
     
     let submitForm = document.getElementById("start-dialogue-submit");
     submitForm.addEventListener("click", function(event){
@@ -186,9 +186,9 @@ function playBall(){
     let ball = Math.floor(Math.random() * 11);    
     let runs = batDie[ball];
     let dialogueBox = document.getElementById("dialogue-box");
-    dialogueBox.textContent = "The bowler is running in ... ";
+   /*  dialogueBox.textContent = "The bowler is running in ... ";
     setTimeout (function(){dialogueBox.textContent = " ... He delivers the ball";}, 1000);
-    setTimeout(function(){
+    setTimeout(function(){ */
         switch (runs){
             case "0a":
                 dialogueBox.textContent = "Well defended but no runs";
@@ -244,12 +244,12 @@ function playBall(){
         
             case "Owzthat":
                 dialogueBox.textContent = "OWZ-that!!! - The fielding side are appealing. Click on the OWZthat button to learn your fate";
-                document.getElementById("play-Owzthat").disabled = false;
-                document.getElementById("play-ball").disabled = true; 
+               // document.getElementById("play-Owzthat").disabled = false;
+              //  document.getElementById("play-ball").disabled = true; 
             break;  
         }
-        }, 2500);
-}
+        }/* , 2500);
+} */
 
 /**
  * incrementRuns function: 
@@ -335,8 +335,8 @@ function umpire(){
     }
 }, 2000);
 
-    document.getElementById("play-Owzthat").disabled = true;
-    document.getElementById("play-ball").disabled = false;
+    //document.getElementById("play-Owzthat").disabled = true;
+    //document.getElementById("play-ball").disabled = false;
 }
 
 /**
@@ -419,7 +419,7 @@ function wicket(decision){
  * endGame (win) function: processes result and displays relevant result message
  */
 function endGameWin(wicketsFallen, target){
-    let winDialogue = document.getElementById("endGameWin");
+    let winDialogue = document.getElementById("end-game-win");
     winDialogue.style.display="block";
     let winTarget = document.getElementById("winningTarget");
     winTarget.innerText = "You were set " + target + " runs to win.";
@@ -432,7 +432,7 @@ function endGameWin(wicketsFallen, target){
  * endGame (loss) function: processes result and displays relevant result message
  */
 function endGameLose(previousTotal){
-    let lossDialogue = document.getElementById("endGameDefeat");
+    let lossDialogue = document.getElementById("end-game-defeat");
     lossDialogue.style.display="block";
     let winningTarget = parseInt(document.getElementById("score-to-beat").innerText);
     let losingMargin = winningTarget - previousTotal;
@@ -467,14 +467,14 @@ function toggle(){
  * resets scoreboard to initial start game values at start of new game
  */
 function resetScoreboard(){
-let batsmanNumA = document.getElementById("batNumA");
-batsmanNumA.innerText = "1";
-let batsmanNumB = document.getElementById("batNumB");
-batsmanNumB.innerText = "2";
-let scoreBoxes = document.getElementsByClassName("score-box");      
-for (let i = 0; i < scoreBoxes.length; i++){
-    scoreBoxes[i].innerText = "0";
-}
+    let batsmanNumA = document.getElementById("batNumA");
+    batsmanNumA.innerText = "1";
+    let batsmanNumB = document.getElementById("batNumB");
+    batsmanNumB.innerText = "2";
+    let scoreBoxes = document.getElementsByClassName("score-box");      
+    for (let i = 0; i < scoreBoxes.length; i++){
+        scoreBoxes[i].innerText = "0";
+    }
 }
 
 
