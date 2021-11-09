@@ -89,8 +89,8 @@
 
     <!-- Game Start dialogue box -->
     <!-- Automatically opens at start of game-->
-    <dialog id="start-modal" class="modal">
-      <h2 id="welcome">Welcome to OWZthat</h2>
+    <div id="start-modal" class="modal">
+      <h2 class="modal-header" id="welcome">Welcome to OWZthat</h2>
       <h3>Enter your name and choose your opponents below to start playing.</h3>
       
       <form action="" method="dialog" id="startForm">
@@ -138,7 +138,7 @@
           <button type="submit" class="btn btn-lg btn-primary" id="start-dialogue-submit" aria-label="Start game">Start Game</button>
         </div>
       </form>      
-    </dialog>
+    </div>
     <!-- game start dialogue cbox ends-->
 
     <!-- End Game dialogue box: win-->
@@ -208,7 +208,7 @@
 
     <!-- Missing first name dialogue box -->
     <!-- Opens when user submits start game form but has not completed first name field -->
-    <dialog id="invalid-first-name" class="modal-lg">
+    <dialog id="invalid-first-name" class="modal">
       <h4 class="modal-title" id="fn-modal-title">Missing first name</h4>
       <p id="first-name-dialogue-text"><i class="fal fa-exclamation-triangle awesome"></i> Please enter your first name before continuing.</i></p>
       <div class="modal-footer">
@@ -222,7 +222,7 @@
 
   <!-- Missing team dialogue box -->
     <!-- Opens when user submits start game form but has not selected any team -->
-    <dialog id="invalid-team" class="modal-lg">
+    <dialog id="invalid-team" class="modal">
       <h4 class="modal-title">Missing team selection</h4>
       <p id="team-dialogue-text"><i class="fal fa-exclamation-triangle awesome"></i> Please select a team to play against before continuing.</p>
       <div class="modal-footer">
